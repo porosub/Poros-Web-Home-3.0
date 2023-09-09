@@ -1,3 +1,47 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/jsx-runtime",
+    "plugin:react/recommended",
+    "plugin:@next/next/recommended",
+    "standard-with-typescript",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "next"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "@typescript-eslint/semi": "off",
+    "@typescript-eslint/quotes": "off",
+    "@typescript-eslint/space-before-function-paren": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/indent": "off",
+
+    "indent": [1, 2],
+    "react/boolean-prop-naming": [
+      2,
+      {
+        "propTypeNames": ["bool", "mutuallyExclusiveTrueProps"],
+        "rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+",
+        "message": "It is better if your prop ({{ open }}) matches this pattern: ({{ isOpen }})",
+        "validateNested": true
+      }
+    ],
+    "react/button-has-type": [
+      2,
+      {
+        "button": true,
+        "submit": false,
+        "reset": true
+      }
+    ]
+  }
 }
