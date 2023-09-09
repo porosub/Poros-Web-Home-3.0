@@ -1,5 +1,10 @@
 # Pengembangan Web Profil POROS 2023
 
+## Versi Node
+
+1. NPM v9.5.0
+2. Node v18.15.0
+
 ## Daftar Framework / Library
 
 1. [Next JS](https://nextjs.org/)
@@ -31,6 +36,8 @@
 5.  Komponen yang dibuat sebagai **modifikasi** terhadap tag HTML tertentu (misal button) harus meng-**extend** props tag HTML tersebut menggunakan **interface**.
 
 6.  **Jangan memberikan** props ke komponen jika data props tersebut **tidak digunakan** dalam komponen tersebut. (misal, setelah fetch data API maka jangan berikan seluruh data API tersebut sebagai props ke komponen card yang hanya menampilkan gambar dan judul).
+
+7.  **Wajib** menuliskan dokumentasi singkat dalam bentuk **komentar** pada fungsi unik yang kalian buat. Dokumentasi / komentar dituliskan di atas fungsi yang dibuat.
 
 ## Next JS Framework
 
