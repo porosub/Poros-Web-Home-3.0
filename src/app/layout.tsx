@@ -1,11 +1,11 @@
-import type React from "react";
 import type { Metadata } from "next";
+import type React from "react";
 
-import { Inter } from "next/font/google";
-import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Rubik } from "next/font/google";
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const mainFont = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +19,7 @@ interface IRootLayoutProps {
 const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={mainFont.className}>
         <Navbar />
         {children}
       </body>

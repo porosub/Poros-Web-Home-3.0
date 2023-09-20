@@ -10,11 +10,11 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed w-full flex py-5 px-10 bg-white justify-between items-center transition-all duration-150 ${
-        changeNav ? "bg-opacity-40" : "bg-opacity-0"
+      className={`fixed w-full flex py-5 z-30 px-5 md:px-10 bg-white justify-between items-center transition-all duration-150 ${
+        changeNav ? "bg-opacity-60" : "bg-opacity-0"
       }`}
     >
-      <Link href={"/"}>
+      <Link href={"/"} className={`${changeNav ? "opacity-100" : "opacity-0"}`}>
         <POROSLogo className="w-12 h-12" />
       </Link>
 
