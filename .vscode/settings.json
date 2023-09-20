@@ -5,5 +5,22 @@
   "prettier.semi": true,
   "prettier.useEditorConfig": true,
   "prettier.bracketSpacing": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.trailingComma": "es5",
+  "prettier.quoteProps": "as-needed",
+  "prettier.proseWrap": "preserve",
+  "prettier.htmlWhitespaceSensitivity": "css",
+  "prettier.endOfLine": "auto",
+  "prettier.useTabs": false,
+  "prettier.vueIndentScriptAndStyle": false,
+  "prettier.withNodeModules": false,
+  "prettier.singleAttributePerLine": false,
+  "prettier.resolveGlobalModules": false,
+  "prettier.requirePragma": false,
+  "prettier.requireConfig": false,
+  "prettier.jsxSingleQuote": false,
+  "prettier.insertPragma": false,
+  "prettier.enableDebugLogs": false,
+  "prettier.enable": true,
+  "prettier.embeddedLanguageFormatting": "auto"
 }
