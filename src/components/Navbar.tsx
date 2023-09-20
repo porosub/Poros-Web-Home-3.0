@@ -2,8 +2,8 @@
 
 import { useNavbarScroll } from "@/hooks/useNavbarScroll";
 import Link from "next/link";
-import { MenuIcon } from "./MenuIcon";
 import POROSLogo from "./POROSLogo";
+import { MenuIcon } from "./icons/MenuIcon";
 
 const Navbar: React.FC = () => {
   const changeNav = useNavbarScroll();
