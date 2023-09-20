@@ -39,10 +39,6 @@
 
 7.  **Wajib** menuliskan dokumentasi singkat dalam bentuk **komentar** pada fungsi unik yang kalian buat. Dokumentasi / komentar dituliskan di atas fungsi yang dibuat.
 
-## Next JS Framework
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
 Pertama clone repo Poros-Web-Home-3.0:
@@ -116,3 +112,22 @@ git push -u origin "nama branch"
 ```
 
 Kemudian lakukan pull request ke branch development pada repository Poros-Web-Home-3.0
+
+## Diskusi dan Request Perubahan Codebase
+
+Untuk mengajukan diskusi topik terkait repo, gunakan fitur [discussion](https://github.com/porosub/Poros-Web-Home-3.0/discussions)
+
+Untuk mengajukan perubahan codebasee, gunakan fitur [issue](https://github.com/porosub/Poros-Web-Home-3.0/issues) pada github dengan ketentuan label:
+1. **enhancement** untuk enhancement fitur tertentu atau penambahan fitur baru
+2. **bug** untuk report dan request bug fixing pada website
+3. **documentation** untuk penambahan dokumentasi, fixing typo pada dokumentasi, dan segala hal terkait dokumentasi website
+
+<br/>
+
+<div align="center">
+  <img src="https://media.giphy.com/media/vzO0Vc8b2VBLi/giphy.gif" width="300"/>
+</div>
+
+<div align="center">
+  <h1>Happy Coding</h1>
+</div>
