@@ -32,14 +32,6 @@ const Navbar: React.FC = () => {
         <li>
           <Link href={"/tentang-kami"}>Tentang Kami</Link>
         </li>
-        <li>
-          <button
-            type="button"
-            className="bg-[#FF6464] text-white rounded-full py-1 px-3"
-          >
-            Masuk
-          </button>
-        </li>
       </ul>
     </nav>
   );
