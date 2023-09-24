@@ -6,6 +6,7 @@ import type { FC, PropsWithChildren } from "react";
 import { useCallback, useEffect, useState } from "react";
 import { LeftArrowIcon } from "./icons/LeftArrowIcon";
 import { RightArrowIcon } from "./icons/RightArrowIcon";
+import { cn } from "@/lib/utils";
 
 type SliderProps = {
   containerClassName?: string;
@@ -45,33 +46,37 @@ const Carousel: FC<SliderProps> = ({
   }, [sliderMethod, onSelect]);
 
   return (
-    <div className={`${containerClassName} flex flex-col justify-center gap-7`}>
+    <div className={cn("flex justify-center gap-1", containerClassName)}>
+      <div className="flex items-center">
+        <button
+          type="button"
+          onClick={handlePrev}
+          className=" h-full left-0 md:left-5 flex justify-center items-center w-16 md:w-20 text-[#FF6464] disabled:text-gray-400"
+          aria-label="Previous Button"
+          disabled={!prevBtnEnabled}
+        >
+          <LeftArrowIcon className="h-full mr-1" />
+        </button>
+      </div>
       <div
         ref={sliderRef}
         className={`overflow-hidden relative flex w-full gap-5 h-fit ${className}`}
       >
-        <div className={`flex gap-6 w-full cursor-grab active:cursor-grabbing`}>
+        <div className={`flex gap-5 w-full cursor-grab active:cursor-grabbing`}>
           {children}
         </div>
       </div>
-      <button
-        type="button"
-        onClick={handlePrev}
-        className="rounded-full absolute left-0 md:left-5 flex justify-center items-center w-16 h-16 text-[#FF6464] disabled:text-gray-400"
-        aria-label="Previous Button"
-        disabled={!prevBtnEnabled}
-      >
-        <LeftArrowIcon className="h-full mr-1" />
-      </button>
-      <button
-        type="button"
-        onClick={handleNext}
-        className="rounded-full absolute right-0 md:right-5 flex justify-center items-center w-16 h-16 text-[#FF6464] disabled:text-gray-400"
-        aria-label="Previous Button"
-        disabled={!nextBtnEnabled}
-      >
-        <RightArrowIcon className="h-full mr-1" />
-      </button>
+      <div className="flex items-center">
+        <button
+          type="button"
+          onClick={handleNext}
+          className=" h-full right-0 md:right-5 flex justify-center items-center w-16 md:w-20 text-[#FF6464] disabled:text-gray-400"
+          aria-label="Previous Button"
+          disabled={!nextBtnEnabled}
+        >
+          <RightArrowIcon className="h-full mr-1" />
+        </button>
+      </div>
     </div>
   );
 };
