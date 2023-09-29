@@ -62,7 +62,7 @@ const Carousel: FC<SliderProps> = ({
         ref={sliderRef}
         className={`overflow-hidden relative flex w-full gap-5 h-fit ${className}`}
       >
-        <div className={`flex gap-5 w-full cursor-grab active:cursor-grabbing`}>
+        <div className={`flex gap-6 w-full cursor-grab active:cursor-grabbing`}>
           {children}
         </div>
       </div>
