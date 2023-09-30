@@ -19,7 +19,12 @@
   },
   "plugins": ["react", "prettier"],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
 
     "@typescript-eslint/comma-dangle": "off",
     "@typescript-eslint/member-delimiter-style": "off",
