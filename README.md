@@ -39,46 +39,95 @@
 
 7.  **Wajib** menuliskan dokumentasi singkat dalam bentuk **komentar** pada fungsi unik yang kalian buat. Dokumentasi / komentar dituliskan di atas fungsi yang dibuat.
 
-## Next JS Framework
+## Getting Started
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-### Getting Started
-
-First, run the development server:
+Pertama clone repo Poros-Web-Home-3.0:
 
 ```bash
 
-npm run  dev
+git clone git@github.com:porosub/Poros-Web-Home-3.0.git
 
-# or
+atau
 
-yarn dev
-
-# or
-
-pnpm dev
+git clone https://github.com/porosub/Poros-Web-Home-3.0.git
 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Kemudian install depedencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+npm install
 
-### Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
+Kemudian jalankan development server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+npm run dev
 
-### Deploy on Vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Buka [http://localhost:3000](http://localhost:3000) menggunakan browser untuk melihat tampilan website
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Untuk melakukan perubahan pada codebase, buat branch baru dengan nama branch sesuai fitur, perubahan, atau bug fixing yang akan diselesaikan
+
+```bash
+
+git branch "nama-branch"
+
+```
+
+Kemudian pindah ke branch yang telah dibuat
+
+```bash
+
+git switch "nama-branch"
+
+```
+
+<br/>
+
+~ **code your idea** ~
+
+<br/>
+
+Lakukan commit perubahan:
+
+```bash
+
+git add .
+git commit -m "deskripsi perubahan"
+
+```
+
+Push ke repository github:
+
+```bash
+
+git push -u origin "nama branch"
+
+```
+
+Kemudian lakukan pull request ke branch development pada repository Poros-Web-Home-3.0
+
+## Diskusi dan Request Perubahan Codebase
+
+Untuk mengajukan diskusi topik terkait repo, gunakan fitur [discussion](https://github.com/porosub/Poros-Web-Home-3.0/discussions)
+
+Untuk mengajukan perubahan codebasee, gunakan fitur [issue](https://github.com/porosub/Poros-Web-Home-3.0/issues) pada github dengan ketentuan label:
+1. **enhancement** untuk enhancement fitur tertentu atau penambahan fitur baru
+2. **bug** untuk report dan request bug fixing pada website
+3. **documentation** untuk penambahan dokumentasi, fixing typo pada dokumentasi, dan segala hal terkait dokumentasi website
+
+<br/>
+
+<div align="center">
+  <img src="https://media.giphy.com/media/vzO0Vc8b2VBLi/giphy.gif" width="300"/>
+</div>
+
+<div align="center">
+  <h1>Happy Coding</h1>
+</div>

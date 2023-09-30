@@ -2,8 +2,9 @@
 
 import { useNavbarScroll } from "@/hooks/useNavbarScroll";
 import Link from "next/link";
-import POROSLogo from "./POROSLogo";
 import { MenuIcon } from "./icons/MenuIcon";
+import POROSLogo from "../../public/logo-poros.svg";
+import Image from "next/image";
 
 const Navbar: React.FC = () => {
   const changeNav = useNavbarScroll();
@@ -14,8 +15,8 @@ const Navbar: React.FC = () => {
         changeNav ? "bg-opacity-60" : "bg-opacity-0"
       }`}
     >
-      <Link href={"/"} className={`${changeNav ? "opacity-100" : "opacity-0"}`}>
-        <POROSLogo className="w-12 h-12" />
+      <Link href={"/"} className="relative h-12 w-12">
+        <Image src={POROSLogo} alt="logo poros" fill={true} />
       </Link>
 
       <button type="button" className="block md:hidden">
