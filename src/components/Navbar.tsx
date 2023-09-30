@@ -2,7 +2,7 @@
 
 import { useNavbarScroll } from "@/hooks/useNavbarScroll";
 import Link from "next/link";
-import { MenuIcon } from "./MenuIcon";
+import { MenuIcon } from "./icons/MenuIcon";
 import POROSLogo from "../../public/logo-poros.svg";
 import Image from "next/image";
 
