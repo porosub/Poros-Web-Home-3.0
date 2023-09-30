@@ -17,6 +17,12 @@ module.exports = {
     },
     extend: {
       colors: {
+        primaryGreen: "var(--primary-green)",
+        secondaryYellow: "var(-secondary-yellow)",
+        accentRed: "var(--accent-red)",
+        textDarkBlue: "var(--text-darkblue)",
+        backgroundWhite: "var(--background-white)",
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -70,7 +76,13 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        "radial-gradient":
+          "radial-gradient(circle at 0% -60%, var(--primary-green) 5%, var(--background-white) 55%, var(--background-white) 40%)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
 };
+
+export {};

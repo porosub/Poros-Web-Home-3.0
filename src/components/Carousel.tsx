@@ -20,17 +20,17 @@ const Carousel: FC<SliderProps> = ({
   options,
   children,
 }) => {
-  options = { dragThreshold: 8, ...options };
+  options = { dragThreshold: 8, containScroll: "trimSnaps", ...options };
   const [sliderRef, sliderMethod] = useEmblaCarousel(options);
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
 
   const handlePrev = useCallback(() => {
-    sliderMethod != null && sliderMethod.scrollPrev();
+    sliderMethod?.scrollPrev();
   }, [sliderMethod]);
 
   const handleNext = useCallback(() => {
-    sliderMethod != null && sliderMethod.scrollNext();
+    sliderMethod?.scrollNext();
   }, [sliderMethod]);
 
   const onSelect = useCallback((sliderMethod: EmblaCarouselType) => {
@@ -58,14 +58,13 @@ const Carousel: FC<SliderProps> = ({
           <LeftArrowIcon className="h-full mr-1" />
         </button>
       </div>
-      <div
-        ref={sliderRef}
-        className={`overflow-hidden relative flex w-full gap-5 h-fit ${className}`}
-      >
-        <div className={`flex gap-6 w-full cursor-grab active:cursor-grabbing`}>
+
+      <div className="overflow-hidden" ref={sliderRef}>
+        <div className={`flex w-full h-fit ml-[calc(20px*-1)] ${className}`}>
           {children}
         </div>
       </div>
+
       <div className="flex items-center pr-5">
         <button
           type="button"
