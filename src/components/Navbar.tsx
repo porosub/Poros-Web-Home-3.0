@@ -16,7 +16,12 @@ const Navbar: React.FC = () => {
       }`}
     >
       <Link href={"/"} className="relative h-12 w-12">
-        <Image src={POROSLogo} alt="logo poros" fill={true} />
+        <Image
+          src={POROSLogo}
+          alt="logo poros"
+          fill={true}
+          className={`${changeNav ? "opacity-1" : "opacity-0"} duration-150`}
+        />
       </Link>
 
       <button type="button" className="block md:hidden">
