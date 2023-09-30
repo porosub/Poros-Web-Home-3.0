@@ -13,8 +13,6 @@ const Navbar: React.FC = () => {
     <nav
       className={`fixed w-full flex py-5 z-30 px-5 md:px-10 bg-white justify-between items-center transition-all duration-150 ${
         changeNav ? "bg-opacity-60" : "bg-opacity-0"
-      className={`fixed w-full flex py-5 z-30 px-5 md:px-10 bg-white justify-between items-center transition-all duration-150 ${
-        changeNav ? "bg-opacity-60" : "bg-opacity-0"
       }`}
     >
       <Link href={"/"} className="relative h-12 w-12">
