@@ -76,7 +76,7 @@ const PerkenalanDepartemen = () => {
       {/* Mobile pakai Carousel 2*/}
       <div className="md:hidden">
         <div className="max-w-[512px] max-h-[512px]">
-          <Carousel options={{ dragFree: false }}>
+          <Carousel options={{ dragFree: false, align: "start" }}>
             {dataDepartemen.map((departemen, idx) => (
               <CardDepartemen
                 key={idx}
