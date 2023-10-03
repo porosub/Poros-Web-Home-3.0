@@ -4,6 +4,7 @@ import { HeroLeftElement } from "@/components/home/HeroLeftElement";
 import { HeroLeftElementMobile } from "@/components/home/HeroLeftElementMobile";
 import { HeroRightElement } from "@/components/home/HeroRightElement";
 import { HeroRightElementMobile } from "@/components/home/HomeRightElementMobile";
+import PerkenalanDepartemen from "@/components/perkenalan-departemen/perkenalan-departemen";
 import Image from "next/image";
 import type React from "react";
 
@@ -27,6 +28,11 @@ const Home: React.FC = () => {
           <Image src={"/logo-poros.svg"} alt="Logo POROS" fill={true} />
         </div>
       </section>
+
+      <section className="flex flex-col items-center justify-center h-full">
+        <PerkenalanDepartemen />
+      </section>
+
       <section className="flex flex-col justify-center gap-10 pb-20">
         <h2 className="font-bold text-5xl text-center px-5 md:px-20">
           Pencapaian
