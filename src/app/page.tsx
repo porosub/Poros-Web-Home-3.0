@@ -5,6 +5,7 @@ import { HeroLeftElement } from "@/components/home/HeroLeftElement";
 import { HeroLeftElementMobile } from "@/components/home/HeroLeftElementMobile";
 import { HeroRightElement } from "@/components/home/HeroRightElement";
 import { HeroRightElementMobile } from "@/components/home/HomeRightElementMobile";
+import TentangKami from "@/components/tentang-kami/tentang-kami";
 import PerkenalanDepartemen from "@/components/perkenalan-departemen/perkenalan-departemen";
 import Image from "next/image";
 import type React from "react";
@@ -28,6 +29,9 @@ const Home: React.FC = () => {
         <div className="w-52 lg:w-64 hidden md:block aspect-square absolute right-32 top-32">
           <Image src={"/logo-poros.svg"} alt="Logo POROS" fill={true} />
         </div>
+      </section>
+      <section className="flex flex-col items-center justify-center h-screen">
+        <TentangKami />
       </section>
       <section className="flex flex-col items-center justify-center h-full">
         <PerkenalanDepartemen />
