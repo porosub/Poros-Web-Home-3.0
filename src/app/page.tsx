@@ -1,5 +1,6 @@
 import { Card } from "@/components/Card";
 import Carousel from "@/components/Carousel";
+import Footer from "@/components/footer/footer";
 import { HeroLeftElement } from "@/components/home/HeroLeftElement";
 import { HeroLeftElementMobile } from "@/components/home/HeroLeftElementMobile";
 import { HeroRightElement } from "@/components/home/HeroRightElement";
@@ -28,11 +29,9 @@ const Home: React.FC = () => {
           <Image src={"/logo-poros.svg"} alt="Logo POROS" fill={true} />
         </div>
       </section>
-
       <section className="flex flex-col items-center justify-center h-full">
         <PerkenalanDepartemen />
       </section>
-
       <section className="flex flex-col justify-center gap-10 pb-20">
         <h2 className="font-bold text-5xl text-center px-5 md:px-20">
           Pencapaian
@@ -47,6 +46,10 @@ const Home: React.FC = () => {
           <Card className="md:flex-[0_0_33.333%] flex-[0_0_50%] pl-[20px]" />
           <Card className="md:flex-[0_0_33.333%] flex-[0_0_50%] pl-[20px]" />
         </Carousel>
+      </section>
+
+      <section className="flex flex-col items-center justify-center h-full">
+        <Footer />
       </section>
     </main>
   );
