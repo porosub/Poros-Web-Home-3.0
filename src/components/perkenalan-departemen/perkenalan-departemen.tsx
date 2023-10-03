@@ -20,12 +20,12 @@ const PerkenalanDepartemen = () => {
       {/* Mobile pakai Carousel 1*/}
       <div className="md:hidden">
         <div className="max-w-[512px] max-h-[512px]">
-          <Carousel options={{ dragFree: false }}>
+          <Carousel options={{ dragFree: false, align: "start" }}>
             {dataDepartemen.map((departemen, idx) => (
               <CardDepartemen
                 key={idx}
                 departemen={departemen}
-                className="pl-[20px]"
+                className="md:flex-[0_0_33.333%] flex-[0_0_50%] pl-[20px]"
               />
             ))}
           </Carousel>
@@ -81,7 +81,7 @@ const PerkenalanDepartemen = () => {
               <CardDepartemen
                 key={idx}
                 departemen={departemen}
-                className="pl-[20px]"
+                className="md:flex-[0_0_33.333%] flex-[0_0_50%] pl-[20px]"
               />
             ))}
           </Carousel>
