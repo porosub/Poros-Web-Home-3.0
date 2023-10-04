@@ -46,7 +46,7 @@ const Carousel: FC<SliderProps> = ({
   }, [sliderMethod, onSelect]);
 
   return (
-    <div className={cn("flex justify-center gap-1", containerClassName)}>
+    <div className={cn("flex justify-center cursor-grab", containerClassName)}>
       <div className="flex items-center pl-5">
         <button
           type="button"
@@ -60,7 +60,7 @@ const Carousel: FC<SliderProps> = ({
       </div>
 
       <div className="overflow-hidden" ref={sliderRef}>
-        <div className={`flex w-full h-fit ml-[calc(20px*-1)] ${className}`}>
+        <div className={`flex w-full h-fit -ml-[10px] ${className}`}>
           {children}
         </div>
       </div>

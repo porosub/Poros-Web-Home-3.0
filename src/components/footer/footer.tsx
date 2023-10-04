@@ -1,40 +1,14 @@
-import React from "react";
+import Image from "next/image";
+import type React from "react";
+import { Button } from "../ui/button";
 
 const Footer: React.FC = () => {
-  const Instagram = () => {
-    return (
-      <img
-        src="/instagram.svg"
-        alt="Instagram"
-        className="w-6 h-6 md:w-10 h-10 cursor-pointer"
-      />
-    );
-  };
-
-  const Twitter = () => {
-    return (
-      <img
-        src="/twitter.svg"
-        alt="Twitter"
-        className="w-6 h-6 md:w-10 h-10 cursor-pointer ml-4"
-      />
-    );
-  };
-
-  const Youtube = () => {
-    return (
-      <img
-        src="/youtube.svg"
-        alt="YouTube"
-        className="w-6 h-6 md:w-10 h-10 cursor-pointer ml-4"
-      />
-    );
-  };
+  const year = new Date().getFullYear();
 
   return (
     <div className="w-full bg-[#212C4F] p-4 md:p-8">
-      <div className="flex justify-between mx-10 mt-10 mb-12">
-        <div className="flex flex-col w-1/3">
+      <div className="grid sm:grid-cols-3 grid-row-3 sm:items-start sm:justify-items-center gap-6 mx-10 mt-10 mb-12">
+        <div className="flex flex-col">
           <div className="text-[var(--Secondary,#FFD633)] text-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] font-rubik text-[15px] md:text-[20px] font-medium">
             Temui Kami
           </div>
@@ -45,7 +19,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col w-1/3 ml-20 sd:ml-10">
+        <div className="flex flex-col">
           <div className="text-[var(--Secondary,#FFD633)] text-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] font-rubik text-[15px] md:text-[20px] font-medium">
             Kunjungi
           </div>
@@ -60,13 +34,11 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col w-1/3 ml-4">
+        <div className="flex flex-col">
           <div className="text-[var(--Secondary,#FFD633)] text-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] font-rubik text-[15px] md:text-[20px] font-medium ">
             Akses
           </div>
-          <div className="w-[100px] mt-2 bg-[#FF6464] text-white font-rubik text-[10px] md:text-[16px] text-center p-1 px-3 rounded flex-shrink-1">
-            Masuk
-          </div>
+          <Button className="bg-accentRed mt-2 rounded-full w-24">Masuk</Button>
         </div>
       </div>
 
@@ -74,12 +46,30 @@ const Footer: React.FC = () => {
 
       <div className="flex justify-between items-center px-4">
         <div className="text-[#FAFAFA] font-rubik text-[10px] md:text-[14px]">
-          © 2023, POROS Filkom UB 2023
+          © {year}, POROS Filkom UB {year}
         </div>
-        <div className="flex">
-          <Instagram />
-          <Twitter />
-          <Youtube />
+        <div className="grid grid-cols-3 w-32 gap-4">
+          <Image
+            width={10}
+            height={10}
+            src="/instagram.svg"
+            alt="Instagram"
+            className="w-full cursor-pointer"
+          />
+          <Image
+            width={10}
+            height={10}
+            src="/twitter.svg"
+            alt="Twitter"
+            className="w-full cursor-pointer"
+          />
+          <Image
+            width={10}
+            height={10}
+            src="/youtube.svg"
+            alt="YouTube"
+            className="w-full cursor-pointer"
+          />
         </div>
       </div>
     </div>

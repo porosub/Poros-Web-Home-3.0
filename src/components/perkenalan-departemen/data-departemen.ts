@@ -1,4 +1,4 @@
-const dataDepartemen = [
+export const dataDepartemen = [
   {
     nama: "Departemen A",
     gambar: "https://placehold.co/600x400",
@@ -15,5 +15,3 @@ const dataDepartemen = [
     deskripsi: "Deskripsi untuk Departemen C.",
   },
 ];
-
-export default dataDepartemen;
