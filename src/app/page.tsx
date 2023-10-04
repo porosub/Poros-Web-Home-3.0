@@ -6,6 +6,8 @@ import PerkenalanDepartemen from "@/components/perkenalan-departemen/perkenalan-
 
 import Hero from "@/components/home/Hero";
 import Pencapaian from "@/components/pencapaian/pencapaian";
+import BgTentangKami from "@/components/background/bg-tentang-kami";
+import BgPencapaian from "@/components/background/bg-pencapaian";
 
 const Home: React.FC = () => {
   return (
@@ -13,13 +15,15 @@ const Home: React.FC = () => {
       <section>
         <Hero />
       </section>
-      <section className="flex flex-col items-center justify-center mb-24">
+      <section className="flex flex-col items-center justify-center mb-24 relative">
+        <BgTentangKami />
         <TentangKami />
       </section>
       <section className="flex flex-col justify-center pb-20">
         <PerkenalanDepartemen />
       </section>
-      <section className="flex flex-col justify-center gap-10 pb-20">
+      <section className="flex flex-col justify-center gap-10 pb-20 relative">
+        <BgPencapaian />
         <Pencapaian />
       </section>
 

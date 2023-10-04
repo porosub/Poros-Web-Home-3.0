@@ -6,7 +6,7 @@
   "prettier.useEditorConfig": true,
   "prettier.bracketSpacing": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.trailingComma": "es5",
+  "prettier.trailingComma": "all",
   "prettier.quoteProps": "as-needed",
   "prettier.proseWrap": "preserve",
   "prettier.htmlWhitespaceSensitivity": "css",

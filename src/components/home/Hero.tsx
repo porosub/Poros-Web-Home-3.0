@@ -13,7 +13,12 @@ const Hero: FC = () => {
       <HeroLeftElementMobile className="-z-10 absolute md:hidden top-0 left-0" />
       <div className="flex justify-center w-full items-center md:mr-[40%] lg:mr-[20%]">
         <div className="w-32 -translate-y-16 aspect-square md:hidden relative">
-          <Image src={"/logo-poros.svg"} alt="Logo POROS" fill={true} />
+          <Image
+            src={"/logo-poros.svg"}
+            alt="Logo POROS"
+            fill={true}
+            priority={true}
+          />
         </div>
         <h1 className="font-bold text-8xl hidden md:block text-textDarkBlue">
           POROS
