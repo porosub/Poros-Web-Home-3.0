@@ -1,7 +1,7 @@
 import type { FC, SVGAttributes } from "react";
 
 export const HeroRightElementMobile: FC<SVGAttributes<SVGSVGElement>> = (
-  props
+  props,
 ) => {
   return (
     <svg

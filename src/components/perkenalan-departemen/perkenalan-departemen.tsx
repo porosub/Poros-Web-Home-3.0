@@ -10,7 +10,7 @@ import { Card } from "../Card";
 const PerkenalanDepartemen: React.FC = () => {
   return (
     <div className="flex flex-col justify-center relative">
-      <div className="bg-gradient-ball"></div>
+      <div className="bg-gradient-ball position-gradient-ball" />
 
       <div
         className="text-textDarkBlue text-center font-rubik text-[24px] md:text-[48px] font-semibold mb-6 md:mb-8 mt-8"
