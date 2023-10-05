@@ -10,22 +10,21 @@ const ProgramKerja: FC = () => {
       </h2>
       <Carousel
         options={{ dragFree: false, align: "start" }}
-        containerClassName="lg:px-44"
-        className="flex gap-5 ml-0"
+        containerClassName="lg:px-56"
       >
-        <Card className="w-full shrink-0 rounded-2xl bg-gray-200 p-5">
+        <Card className="flex-[0_0_100%] pl-[20px]" innerBox="p-7">
           <div className="relative w-full aspect-video bg-gray-500 rounded-md"></div>
         </Card>
-        <Card className="w-full shrink-0 rounded-2xl bg-gray-200 p-5">
+        <Card className="flex-[0_0_100%] pl-[20px]" innerBox="p-7">
           <div className="relative w-full aspect-video bg-gray-500 rounded-md"></div>
         </Card>
-        <Card className="w-full shrink-0 rounded-2xl bg-gray-200 p-5">
+        <Card className="flex-[0_0_100%] pl-[20px]" innerBox="p-7">
           <div className="relative w-full aspect-video bg-gray-500 rounded-md"></div>
         </Card>
-        <Card className="w-full shrink-0 rounded-2xl bg-gray-200 p-5">
+        <Card className="flex-[0_0_100%] pl-[20px]" innerBox="p-7">
           <div className="relative w-full aspect-video bg-gray-500 rounded-md"></div>
         </Card>
-        <Card className="w-full shrink-0 rounded-2xl bg-gray-200 p-5">
+        <Card className="flex-[0_0_100%] pl-[20px]" innerBox="p-7">
           <div className="relative w-full aspect-video bg-gray-500 rounded-md"></div>
         </Card>
       </Carousel>

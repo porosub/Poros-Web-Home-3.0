@@ -46,17 +46,13 @@ const Carousel: FC<SliderProps> = ({
   }, [sliderMethod, onSelect]);
 
   return (
-    <div
-      className={cn(
-        "flex justify-center cursor-grab active:cursor-grabbing",
-        containerClassName,
-      )}
-    >
+    <div className={cn("flex justify-center", containerClassName)}>
       <div className="flex items-center pl-5">
         <button
           type="button"
           onClick={handlePrev}
           className=" h-fit left-0 md:left-5 flex justify-center items-center w-16 md:w-20 text-[#FF6464] disabled:text-gray-400"
+          about="previous carousel button"
           aria-label="Previous Button"
           disabled={!prevBtnEnabled}
         >
@@ -64,7 +60,10 @@ const Carousel: FC<SliderProps> = ({
         </button>
       </div>
 
-      <div className="overflow-hidden" ref={sliderRef}>
+      <div
+        className="overflow-hidden cursor-grab active:cursor-grabbing"
+        ref={sliderRef}
+      >
         <div className={cn(`flex w-full h-fit -ml-[10px]`, className)}>
           {children}
         </div>
@@ -75,7 +74,8 @@ const Carousel: FC<SliderProps> = ({
           type="button"
           onClick={handleNext}
           className=" h-fit right-0 md:right-5 flex justify-center items-center w-16 md:w-20 text-[#FF6464] disabled:text-gray-400"
-          aria-label="Previous Button"
+          about="next carousel button"
+          aria-label="Next Button"
           disabled={!nextBtnEnabled}
         >
           <RightArrowIcon className="h-full mr-1" />

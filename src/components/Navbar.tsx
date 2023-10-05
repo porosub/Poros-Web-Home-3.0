@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed w-full flex py-5 z-30 px-5 md:px-10 bg-white justify-between items-center transition-all duration-150 ${
+      className={`fixed w-full flex py-3 z-30 px-5 md:px-10 bg-white justify-between items-center transition-all duration-150 ${
         changeNav ? "bg-opacity-60" : "bg-opacity-0"
       }`}
     >
@@ -32,7 +32,12 @@ const Navbar: React.FC = () => {
         />
       </Link>
 
-      <button type="button" className="block md:hidden">
+      <button
+        type="button"
+        title="show menu"
+        aria-label="show menu"
+        className="block md:hidden"
+      >
         <MenuIcon className="h-10 w-10" />
       </button>
 
