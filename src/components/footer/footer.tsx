@@ -23,22 +23,36 @@ const Footer: React.FC = () => {
           <div className="text-[var(--Secondary,#FFD633)] text-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] font-rubik text-[15px] md:text-[20px] font-medium">
             Kunjungi
           </div>
-          <div className="mt-2 text-[var(--variasi,#FF6464)] font-rubik text-[10px] md:text-[16px]">
+          <Button
+            variant="link"
+            about="to home page"
+            className="mt-2 w-fit p-0 text-[var(--variasi,#FF6464)] font-rubik text-[10px] md:text-[16px]"
+          >
             Beranda &gt;
-          </div>
-          <div className="mt-2 text-[var(--variasi,#FF6464)] font-rubik text-[10px] md:text-[16px]">
+          </Button>
+          <Button
+            variant="link"
+            about="to blogs page"
+            className="mt-2 w-fit p-0 text-[var(--variasi,#FF6464)] font-rubik text-[10px] md:text-[16px]"
+          >
             Blogs &gt;
-          </div>
-          <div className="mt-2 text-[var(--variasi,#FF6464)] font-rubik text-[10px] md:text-[16px]">
+          </Button>
+          <Button
+            variant="link"
+            about="to about us page"
+            className="mt-2 w-fit p-0 text-[var(--variasi,#FF6464)] font-rubik text-[10px] md:text-[16px]"
+          >
             Tentang Kami &gt;
-          </div>
+          </Button>
         </div>
 
         <div className="flex flex-col">
           <div className="text-[var(--Secondary,#FFD633)] text-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] font-rubik text-[15px] md:text-[20px] font-medium ">
             Akses
           </div>
-          <Button className="bg-accentRed mt-2 rounded-full w-24">Masuk</Button>
+          <Button about="login" className="bg-accentRed mt-2 rounded-full w-24">
+            Masuk
+          </Button>
         </div>
       </div>
 
