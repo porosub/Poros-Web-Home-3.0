@@ -3,18 +3,18 @@ export const dataDepartemenRND = [
     nama: "Front-End",
     gambar: "/front-end-icon.svg",
     deskripsi:
-      "Lorem ipsum dolor sit amet, consectetuer adipising elit, sed diam nonummy tincidunt ut laoreet dolore magna A",
+      "Membuat dan mengimplementasi -kan tampilan pada aplikasi web maupun mobile yang responsive dan user friendly",
   },
   {
     nama: "Back-End",
     gambar: "/back-end-icon.svg",
     deskripsi:
-      "Lorem ipsum dolor sit amet, consectetuer adipising elit, sed diam nonummy tincidunt ut laoreet dolore magna B.",
+      "Mengembangkan API, deploy aplikasi, dan melakukan pemrosesan data berdasarkan logika bisnis yang diperlukan",
   },
   {
     nama: "Security",
     gambar: "/security-icon.svg",
     deskripsi:
-      "Lorem ipsum dolor sit amet, consectetuer adipising elit, sed diam nonummy tincidunt ut laoreet dolore magna C.",
+      "Menerapkan metode untuk meningkatkan keamanan sistem melalui kolaborasi dengan divisi front-end dan back-end",
   },
 ];
