@@ -2,9 +2,10 @@
 
 import type React from "react";
 
-import { dataDepartemen } from "./data-departemen";
 import Department from "./departement";
 import Carousel from "../Carousel";
+import { dataDepartemenRND } from "./data-departemen-RnD";
+import { dataDepartemenKeorganisasian } from "./data-departemen-keorganisasian";
 import { Card } from "../Card";
 
 const PerkenalanDepartemen: React.FC = () => {
@@ -28,25 +29,25 @@ const PerkenalanDepartemen: React.FC = () => {
         }}
         containerClassName="md:hidden"
       >
-        {dataDepartemen.map((departemen) => (
+        {dataDepartemenRND.map((departemen) => (
           <Card
             key={departemen.nama}
             deskripsi={departemen.deskripsi}
             className="sm:flex-[0_0_50%] flex-[0_0_100%] pl-[20px]"
           >
-            <Department nama={departemen.nama} gambar="/logo-poros.svg" />
+            <Department nama={departemen.nama} gambar={departemen.gambar} />
           </Card>
         ))}
       </Carousel>
 
       <div className="grid grid-cols-3 mx-32 lg:mx-48 gap-6 lg:gap-10">
-        {dataDepartemen.map((departemen) => (
+        {dataDepartemenRND.map((departemen) => (
           <Card
             key={departemen.nama}
             deskripsi={departemen.deskripsi}
             className="hidden md:block"
           >
-            <Department nama={departemen.nama} gambar="/logo-poros.svg" />
+            <Department nama={departemen.nama} gambar={departemen.gambar} />
           </Card>
         ))}
       </div>
@@ -67,25 +68,25 @@ const PerkenalanDepartemen: React.FC = () => {
         }}
         containerClassName="md:hidden"
       >
-        {dataDepartemen.map((departemen) => (
+        {dataDepartemenKeorganisasian.map((departemen) => (
           <Card
             key={departemen.nama}
             deskripsi={departemen.deskripsi}
             className="sm:flex-[0_0_50%] flex-[0_0_100%] pl-[20px]"
           >
-            <Department nama={departemen.nama} gambar="/logo-poros.svg" />
+            <Department nama={departemen.nama} gambar={departemen.gambar} />
           </Card>
         ))}
       </Carousel>
 
       <div className="grid grid-cols-3 mx-32 lg:mx-48 gap-6 lg:gap-10 pb-20">
-        {dataDepartemen.map((departemen) => (
+        {dataDepartemenKeorganisasian.map((departemen) => (
           <Card
             key={departemen.nama}
             deskripsi={departemen.deskripsi}
-            className="hidden md:block"
+            className="hidden md:block overflow-hidden"
           >
-            <Department nama={departemen.nama} gambar="/logo-poros.svg" />
+            <Department nama={departemen.nama} gambar={departemen.gambar} />
           </Card>
         ))}
       </div>
