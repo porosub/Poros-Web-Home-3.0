@@ -1,8 +1,9 @@
 import type { FC } from "react";
+import Image from "next/image";
+
 import Carousel from "../Carousel";
 import { Card } from "../Card";
 import { programKerja } from "./data-program-kerja";
-import Image from "next/image";
 
 const ProgramKerja: FC = () => {
   return (
@@ -10,6 +11,7 @@ const ProgramKerja: FC = () => {
       <h2 className="font-bold text-white text-5xl text-center px-5 md:px-20">
         Program Kerja
       </h2>
+
       <Carousel
         options={{ dragFree: false, align: "start" }}
         containerClassName="lg:px-56"
@@ -28,6 +30,7 @@ const ProgramKerja: FC = () => {
                   alt="Pic"
                   fill={true}
                   className="object-cover"
+                  unoptimized={true}
                 />
               </div>
             </Card>

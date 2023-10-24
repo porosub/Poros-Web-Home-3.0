@@ -1,8 +1,9 @@
 import React from "react";
 import type { FC } from "react";
+import Image from "next/image";
+
 import { HeroLeftElement } from "./HeroLeftElement";
 import { HeroLeftElementMobile } from "./HeroLeftElementMobile";
-import Image from "next/image";
 import { HeroRightElement } from "./HeroRightElement";
 import { HeroRightElementMobile } from "./HomeRightElementMobile";
 
