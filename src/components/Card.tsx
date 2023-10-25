@@ -11,12 +11,12 @@ export const Card: FC<CardProps> = (props) => {
   return (
     <div {...resprops}>
       <div
-        className={`rounded-2xl bg-gray-200 flex items-center flex-col ${innerBox}`}
+        className={`rounded-2xl h-full bg-gray-200 flex items-center flex-col ${innerBox}`}
       >
         {children ?? (
           <div className="w-full aspect-video md:aspect-square bg-gray-500 rounded-lg"></div>
         )}
-        <p className="mt-5 self-start">
+        <p className="mt-5 text-center text-sm w-full self-start">
           {deskripsi ?? "lorem iplsu dolor sit amet"}
         </p>
       </div>
