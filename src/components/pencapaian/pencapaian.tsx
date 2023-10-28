@@ -2,6 +2,7 @@ import React from "react";
 import type { FC } from "react";
 import Carousel from "../Carousel";
 import { Card } from "../Card";
+import { dataPencapaian } from "./data-pencapaian";
 
 const Pencapaian: FC = () => {
   return (
@@ -16,14 +17,13 @@ const Pencapaian: FC = () => {
         options={{ dragFree: false, align: "start" }}
         containerClassName="lg:mx-32"
       >
-        <Card className="md:flex-[0_0_33.333%] sm:flex-[0_0_50%] flex-[0_0_100%] pl-[20px]" />
-        <Card className="md:flex-[0_0_33.333%] sm:flex-[0_0_50%] flex-[0_0_100%] pl-[20px]" />
-        <Card className="md:flex-[0_0_33.333%] sm:flex-[0_0_50%] flex-[0_0_100%] pl-[20px]" />
-        <Card className="md:flex-[0_0_33.333%] sm:flex-[0_0_50%] flex-[0_0_100%] pl-[20px]" />
-        <Card className="md:flex-[0_0_33.333%] sm:flex-[0_0_50%] flex-[0_0_100%] pl-[20px]" />
-        <Card className="md:flex-[0_0_33.333%] sm:flex-[0_0_50%] flex-[0_0_100%] pl-[20px]" />
-        <Card className="md:flex-[0_0_33.333%] sm:flex-[0_0_50%] flex-[0_0_100%] pl-[20px]" />
-        <Card className="md:flex-[0_0_33.333%] sm:flex-[0_0_50%] flex-[0_0_100%] pl-[20px]" />
+        {dataPencapaian.map((pencapaian) => (
+          <Card
+            deskripsi={pencapaian.deskripsi}
+            gambar={pencapaian.gambar}
+            className="sm:flex-[0_0_33%] flex-[0_0_100%] pl-[20px]"
+          ></Card>
+        ))}
       </Carousel>
     </>
   );
