@@ -17,12 +17,13 @@ const Pencapaian: FC = () => {
         options={{ dragFree: false, align: "start" }}
         containerClassName="lg:mx-32"
       >
-        {dataPencapaian.map((pencapaian) => (
+        {dataPencapaian.map((pencapaian, i) => (
           <Card
+            key={i}
             deskripsi={pencapaian.deskripsi}
             gambar={pencapaian.gambar}
             className="sm:flex-[0_0_33%] flex-[0_0_100%] pl-[20px]"
-          ></Card>
+          />
         ))}
       </Carousel>
     </>

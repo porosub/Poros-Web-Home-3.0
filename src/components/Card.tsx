@@ -18,6 +18,7 @@ export const Card: FC<CardProps> = (props) => {
           <img
             src={gambar}
             className="w-full aspect-video md:aspect-square rounded-lg"
+            alt="Card Image"
           />
         )}
         <p className="mt-5 text-center text-sm w-full self-start">
