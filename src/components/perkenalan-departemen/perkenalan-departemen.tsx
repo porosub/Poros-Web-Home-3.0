@@ -2,10 +2,10 @@
 
 import type React from "react";
 
-import { dataDepartemenRND } from "./data-departemen-RnD";
-import { dataDepartemenKeorganisasian } from "./data-departemen-keorganisasian";
 import Department from "./departement";
 import Carousel from "../Carousel";
+import { dataDepartemenRND } from "./data-departemen-RnD";
+import { dataDepartemenKeorganisasian } from "./data-departemen-keorganisasian";
 import { Card } from "../Card";
 
 const PerkenalanDepartemen: React.FC = () => {
