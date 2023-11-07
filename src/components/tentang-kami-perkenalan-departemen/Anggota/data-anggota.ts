@@ -1,0 +1,98 @@
+export const dataStrukturAnggota = [
+  {
+    id: 1,
+    gambar: "/pencapaian-gambar-1.svg",
+    nama: "Nama",
+    divisi: "Front-end dan Multimedia",
+  },
+  {
+    id: 2,
+    gambar: "/pencapaian-gambar-1.svg",
+    nama: "Nama",
+    divisi: "Front-end dan Multimedia",
+  },
+  {
+    id: 3,
+    gambar: "/pencapaian-gambar-1.svg",
+    nama: "Nama",
+    divisi: "Front-end dan Multimedia",
+  },
+  {
+    id: 4,
+    gambar: "/pencapaian-gambar-1.svg",
+    nama: "Nama",
+    divisi: "Front-end dan Multimedia",
+  },
+  {
+    id: 5,
+    gambar: "/pencapaian-gambar-1.svg",
+    nama: "Nama",
+    divisi: "Front-end dan Multimedia",
+  },
+  {
+    id: 6,
+    gambar: "/pencapaian-gambar-1.svg",
+    nama: "Nama",
+    divisi: "Front-end dan Multimedia",
+  },
+  {
+    id: 7,
+    gambar: "/pencapaian-gambar-1.svg",
+    nama: "Nama",
+    divisi: "Front-end dan Multimedia",
+  },
+  {
+    id: 8,
+    gambar: "/pencapaian-gambar-1.svg",
+    nama: "Nama",
+    divisi: "Front-end dan Multimedia",
+  },
+  {
+    id: 9,
+    gambar: "/pencapaian-gambar-1.svg",
+    nama: "Nama",
+    divisi: "Front-end dan Multimedia",
+  },
+  {
+    id: 10,
+    gambar: "/pencapaian-gambar-1.svg",
+    nama: "Nama",
+    divisi: "Front-end dan Multimedia",
+  },
+  {
+    id: 11,
+    gambar: "/pencapaian-gambar-1.svg",
+    nama: "Nama",
+    divisi: "Front-end dan Multimedia",
+  },
+  {
+    id: 12,
+    gambar: "/pencapaian-gambar-1.svg",
+    nama: "Nama",
+    divisi: "Front-end dan Multimedia",
+  },
+  {
+    id: 13,
+    gambar: "/pencapaian-gambar-1.svg",
+    nama: "Nama",
+    divisi: "Front-end dan Multimedia",
+  },
+  {
+    id: 14,
+    gambar: "/pencapaian-gambar-1.svg",
+    nama: "Nama",
+    divisi: "Front-end dan Multimedia",
+  },
+  {
+    id: 15,
+    gambar: "/pencapaian-gambar-1.svg",
+    nama: "Nama",
+    divisi: "Front-end dan Multimedia",
+  },
+  {
+    id: 16,
+    gambar: "/pencapaian-gambar-1.svg",
+    nama: "Nama",
+    divisi: "Front-end dan Multimedia",
+  },
+];
