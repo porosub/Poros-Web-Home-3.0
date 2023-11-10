@@ -21,7 +21,7 @@ const TentangKamiStrukturBPI = () => {
       </div>
 
       <div className="flex flex-col items-center my-4 mb-24">
-        <h2 className="font-rubik lg:text-3xl font-medium lg:font-bold text-[#212C4F] mb-2 lg:w-[1100px]">
+        <h2 className="font-rubik lg:text-3xl font-bold text-xl lg:font-bold text-[#212C4F] mb-2 lg:w-[1100px]">
           Struktur BPI
         </h2>
         <div className="w-[330px] lg:w-[1100px] h-[3px] bg-[#C3C3C3]"></div>
@@ -38,7 +38,7 @@ const TentangKamiStrukturBPI = () => {
           <Card className="sm:flex-[0_0_50%] flex-[0_0_100%] pl-[20px]">
             <img
               src={struktur.gambar}
-              className="w-full aspect-video md:aspect-square rounded-lg"
+              className="w-full aspect-video object-cover md:object-content md:aspect-square rounded-lg"
             />
             <Struktur nama={struktur.nama} jabatan={struktur.jabatan} />
           </Card>
@@ -48,10 +48,10 @@ const TentangKamiStrukturBPI = () => {
         <div className="xl:mx-16">
           <div className="grid grid-cols-2 mx-40 lg:mx-64 xl:mx-96 gap-6 lg:gap-10">
             {dataStrukturBPI.map((struktur) => (
-              <Card className="h-[380px] w-[300px]">
+              <Card className="w-full min-h-full">
                 <img
                   src={struktur.gambar}
-                  className="w-full aspect-video md:aspect-square rounded-lg"
+                  className="w-full aspect-video object-cover md:object-content md:aspect-square rounded-lg"
                 />
                 <Struktur nama={struktur.nama} jabatan={struktur.jabatan} />
               </Card>
