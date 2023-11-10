@@ -10,7 +10,7 @@ const TentangKamiStrukturBPH = () => {
   return (
     <div>
       <div className="flex flex-col items-center my-4 mb-24">
-        <h2 className="font-rubik lg:text-3xl font-medium lg:font-bold text-[#212C4F] mb-2 lg:w-[1100px]">
+        <h2 className="font-rubik lg:text-3xl font-bold text-xl text-[#212C4F] mb-2 lg:w-[1100px]">
           Struktur BPH
         </h2>
         <div className="w-[330px] lg:w-[1100px] h-[3px] bg-[#C3C3C3]"></div>
@@ -37,7 +37,7 @@ const TentangKamiStrukturBPH = () => {
               <Card className="w-full bg-gray-200 rounded-lg shadow-md mb-4">
                 <img
                   src={struktur.gambar}
-                  className="w-full aspect-video md:aspect-square rounded-lg"
+                  className="w-full aspect-video object-cover md:object-content md:aspect-square rounded-lg"
                 />
                 <Struktur nama={struktur.nama} jabatan={struktur.jabatan} />
               </Card>
@@ -46,7 +46,7 @@ const TentangKamiStrukturBPH = () => {
                   <Card className="w-full bg-gray-200 rounded-lg shadow-md">
                     <img
                       src={dataStrukturBPH[index + 1].gambar}
-                      className="w-full aspect-video md:aspect-square rounded-lg"
+                      className="w-full aspect-video object-cover md:object-content md:aspect-square rounded-lg"
                     />
                     <Struktur
                       nama={dataStrukturBPH[index + 1].nama}
@@ -78,12 +78,12 @@ const TentangKamiStrukturBPH = () => {
                 <Card>
                   <img
                     src={struktur.gambar}
-                    className="w-full aspect-video md:aspect-square rounded-lg"
+                    className="w-full aspect-video object-cover md:object-content md:aspect-square rounded-lg"
                   />
                   <Struktur nama={struktur.nama} jabatan={struktur.jabatan} />
                   {struktur.divisi && (
                     <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full z-10">
-                      <span className="text-xs font-bold bg-white px-2 py-1 rounded">
+                      <span className="text-xs font-medium bg-white px-2 py-1 rounded">
                         {struktur.divisi}
                       </span>
                     </div>
