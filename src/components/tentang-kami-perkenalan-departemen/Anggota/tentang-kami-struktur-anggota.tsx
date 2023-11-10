@@ -8,7 +8,7 @@ const TentangKamiStrukturAnggota = () => {
   return (
     <div>
       <div className="flex flex-col items-center my-4 mb-24">
-        <h2 className="font-rubik lg:text-3xl font-medium lg:font-bold text-[#212C4F] mb-2 lg:w-[1100px]">
+        <h2 className="font-rubik lg:text-3xl font-bold text-[20px] lg:font-bold text-[#212C4F] mb-2 lg:w-[1100px]">
           Struktur Anggota
         </h2>
         <div className="w-[330px] lg:w-[1100px] h-[3px] bg-[#C3C3C3]"></div>
@@ -30,7 +30,7 @@ const TentangKamiStrukturAnggota = () => {
               <Card className="w-full bg-gray-200 rounded-lg shadow-md mb-4">
                 <img
                   src={struktur.gambar}
-                  className="w-full aspect-video md:aspect-square rounded-lg"
+                  className="w-full aspect-video object-cover md:object-content md:aspect-square rounded-lg"
                 />
                 <Struktur nama={struktur.nama} jabatan={struktur.divisi} />
               </Card>
@@ -39,7 +39,7 @@ const TentangKamiStrukturAnggota = () => {
                   <Card className="w-full bg-gray-200 rounded-lg shadow-md">
                     <img
                       src={dataStrukturAnggota[index + 1].gambar}
-                      className="w-full aspect-video md:aspect-square rounded-lg"
+                      className="w-full aspect-video object-cover md:object-content md:aspect-square rounded-lg"
                     />
                     <Struktur
                       nama={dataStrukturAnggota[index + 1].nama}
@@ -53,7 +53,7 @@ const TentangKamiStrukturAnggota = () => {
         )}
       </Carousel>
       <div className="hidden md:block">
-        <div className="grid grid-cols-4 mx-32 lg:mx-48 gap-6 lg:gap-10">
+        <div className="grid xl:grid-cols-4 grid-cols-3 mx-32 lg:mx-48 gap-6 lg:gap-10">
           {dataStrukturAnggota.map((struktur, index) => (
             <div
               key={struktur.id}
@@ -64,9 +64,13 @@ const TentangKamiStrukturAnggota = () => {
               <Card>
                 <img
                   src={struktur.gambar}
-                  className="w-full aspect-video md:aspect-square rounded-lg"
+                  className="w-full aspect-video object-cover md:object-content md:aspect-square rounded-lg"
                 />
-                <Struktur nama={struktur.nama} jabatan={struktur.divisi} />
+                <Struktur
+                  nama={struktur.nama}
+                  jabatan={struktur.divisi}
+                  className="text-red"
+                />
                 {struktur.divisi && (
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full z-10">
                     <span className="text-xs font-bold bg-white px-2 py-1 rounded">
