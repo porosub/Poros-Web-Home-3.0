@@ -19,12 +19,13 @@ const TentangKamiStrukturBPI = () => {
           Daftar Pengurus
         </Badge>
       </div>
-
-      <div className="flex flex-col items-center my-4 mb-24">
-        <h2 className="font-rubik lg:text-3xl font-bold text-xl lg:font-bold text-[#212C4F] mb-2 lg:w-[1100px]">
-          Struktur BPI
-        </h2>
-        <div className="w-[330px] lg:w-[1100px] h-[3px] bg-[#C3C3C3]"></div>
+      <div>
+        <div className="flex flex-col items-center my-4 mb-24">
+          <h2 className="font-rubik lg:text-3xl md:text-2xl font-bold text-xl lg:font-bold text-[#212C4F] mb-2 lg:w-[800px] xl:w-[1100px]">
+            Struktur BPI
+          </h2>
+          <div className="w-[330px] lg:w-[800px] xl:w-[1100px] h-[3px] bg-[#C3C3C3]"></div>
+        </div>
       </div>
 
       <Carousel
