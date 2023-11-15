@@ -74,7 +74,7 @@ const TentangKami: FC = () => {
               className="object-top"
             />
           </div>
-          <div className="flex md:w-1/2 text-[10px] flex-col gap-3  md:gap-10 font-medium">
+          <div className="flex md:w-1/2 text-xs md:text-sm flex-col gap-3  md:gap-10 font-medium">
             <div className="flex bg-muted gap-5 items-center justify-center py-4 px-5 shadow-xl rounded-2xl">
               <div className="basis-1/6">
                 <div className="relative w-full aspect-square">
