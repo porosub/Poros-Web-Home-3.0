@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
 
   return (
     <div className="w-full bg-[#212C4F] p-4 md:p-8">
-      <div className="grid sm:grid-cols-3 grid-row-3 sm:items-start sm:justify-items-center gap-6 mx-10 mt-10 mb-12">
+      <div className="grid sm:grid-cols-3 grid-row-3 sm:items-start sm:justify-items-center gap-6 mx-4 mt-10 mb-12">
         <div className="flex flex-col">
           <div className="text-[var(--Secondary,#FFD633)] text-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] font-rubik text-[15px] md:text-[20px] font-medium">
             Temui Kami

@@ -17,7 +17,7 @@ export const Card: FC<CardProps> = (props) => {
         {children ?? (
           <img
             src={gambar}
-            className="w-full aspect-video md:aspect-square rounded-lg"
+            className="w-full object-cover object-top aspect-video md:aspect-square rounded-lg"
             alt="Card Image"
           />
         )}
