@@ -16,7 +16,7 @@ const TentangKami: React.FC = () => {
           Kami
         </Badge>
       </div>
-      <div className="w-full text-center [max-inline-size:50ch] [text-wrap:balance] text-[#212C4F] font-rubik text-xxs md:text-base">
+      <div className="w-full text-center [max-inline-size:50ch] [text-wrap:balance] text-[#212C4F] font-rubik text-base">
         POROS Organization of Open Source merupakan sebuah lembaga semi otonom
         yang mewadahi pengguna GNU/Linux serta perangkat lunak sumber terbuka,
         bebas dan legal yang bertempat di Fakultas Ilmu Komputer Universitas
