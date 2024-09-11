@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { FC } from "react";
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -15,11 +16,15 @@ export const Card: FC<CardProps> = (props) => {
         className={`rounded-2xl h-full bg-gray-200 flex items-center flex-col ${innerBox}`}
       >
         {children ?? (
-          <img
-            src={gambar}
-            className="w-full object-cover object-top aspect-video md:aspect-square rounded-lg"
-            alt="Card Image"
-          />
+          <div className="w-full relative aspect-square">
+            <Image
+              src={gambar!}
+              fill
+              className="object-cover object-top aspect-square rounded-lg"
+              alt="Card Image"
+              unoptimized
+            />
+          </div>
         )}
         <p className="mt-5 text-center text-sm w-full self-start">
           {deskripsi ?? "lorem iplsu dolor sit amet"}

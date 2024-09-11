@@ -19,7 +19,6 @@ const ProgramKerja: FC = () => {
             <Card
               key={index}
               className="flex-[0_0_100%] pl-[20px]"
-              innerBox="p-7"
               deskripsi={description}
             >
               <div className="relative w-full aspect-video overflow-hidden bg-gray-500 rounded-md">
