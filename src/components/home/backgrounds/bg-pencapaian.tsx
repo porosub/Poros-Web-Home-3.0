@@ -1,8 +1,8 @@
 import React from "react";
 import type { FC } from "react";
-import Triangle from "./triangle";
-import Circle from "./circle";
-import Rectangle from "./rectangle";
+import Rectangle from "../fragments/rectangle";
+import Triangle from "../fragments/triangle";
+import Circle from "../fragments/circle";
 
 const BgPencapaian: FC = () => {
   return (

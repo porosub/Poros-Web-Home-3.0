@@ -1,6 +1,9 @@
-import Image from "next/image";
+import Link from "next/link";
 import type React from "react";
 import { Button } from "../ui/button";
+import { InstagramIcon } from "./icons/instagram-icon";
+import { TwitterIcon } from "./icons/twitter.icon";
+import { YoutubeIcon } from "./icons/youtube-icon";
 
 const Footer: React.FC = () => {
   const year = new Date().getFullYear();
@@ -63,27 +66,27 @@ const Footer: React.FC = () => {
           © {year}, POROS Filkom UB {year}
         </div>
         <div className="grid grid-cols-3 w-32 gap-4">
-          <Image
-            width={10}
-            height={10}
-            src="/instagram.svg"
-            alt="Instagram"
-            className="w-full cursor-pointer"
-          />
-          <Image
-            width={10}
-            height={10}
-            src="/twitter.svg"
-            alt="Twitter"
-            className="w-full cursor-pointer"
-          />
-          <Image
-            width={10}
-            height={10}
-            src="/youtube.svg"
-            alt="YouTube"
-            className="w-full cursor-pointer"
-          />
+          <Link
+            href="/"
+            target="_blank"
+            className="bg-white w-[34px] overflow-hidden aspect-square flex items-center justify-center rounded-full"
+          >
+            <InstagramIcon className="w-5 aspect-square text-darkBlue" />
+          </Link>
+          <Link
+            href="/"
+            target="_blank"
+            className="bg-white w-[34px] overflow-hidden aspect-square flex items-center justify-center rounded-full"
+          >
+            <YoutubeIcon className="w-5 aspect-square text-darkBlue" />
+          </Link>
+          <Link
+            href="/"
+            target="_blank"
+            className="bg-white w-[34px] overflow-hidden aspect-square flex items-center justify-center rounded-full"
+          >
+            <TwitterIcon className="w-5 aspect-square text-darkBlue" />
+          </Link>
         </div>
       </div>
     </div>

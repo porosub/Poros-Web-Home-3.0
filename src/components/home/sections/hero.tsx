@@ -1,10 +1,10 @@
 import React from "react";
 import type { FC } from "react";
-import { HeroLeftElement } from "./HeroLeftElement";
-import { HeroLeftElementMobile } from "./HeroLeftElementMobile";
 import Image from "next/image";
-import { HeroRightElement } from "./HeroRightElement";
-import { HeroRightElementMobile } from "./HomeRightElementMobile";
+import { HeroLeftElement } from "../fragments/hero-left-element";
+import { HeroLeftElementMobile } from "../fragments/hero-left-element-mobile";
+import { HeroRightElement } from "../fragments/hero-right-element";
+import { HeroRightElementMobile } from "../fragments/hero-right-element-mobile";
 
 const Hero: FC = () => {
   return (
@@ -14,7 +14,7 @@ const Hero: FC = () => {
       <div className="flex justify-center w-full items-center md:mr-[40%] lg:mr-[20%]">
         <div className="w-32 -translate-y-16 aspect-square md:hidden relative">
           <Image
-            src={"/logo-poros.svg"}
+            src={"/svg/logo/poros.svg"}
             alt="Logo POROS"
             fill={true}
             priority={true}
@@ -27,7 +27,7 @@ const Hero: FC = () => {
       <HeroRightElement className="h-fit hidden md:block absolute -z-10 -right-[130%] md:-right-32 lg:-right-5" />
       <HeroRightElementMobile className="h-fit -z-10 absolute md:hidden -top-10 right-0" />
       <div className="w-52 lg:w-64 hidden md:block aspect-square absolute right-32 top-32">
-        <Image src={"/logo-poros.svg"} alt="Logo POROS" fill={true} />
+        <Image src={"/svg/logo/poros.svg"} alt="Logo POROS" fill={true} />
       </div>
     </div>
   );

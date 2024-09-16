@@ -2,11 +2,12 @@
 
 import type React from "react";
 
-import Department from "./departement";
-import Carousel from "../Carousel";
-import { dataDepartemenRND } from "./data-departemen-RnD";
-import { dataDepartemenKeorganisasian } from "./data-departemen-keorganisasian";
-import { Card } from "../Card";
+import {
+  dataDepartemenKeorganisasian,
+  dataDepartemenRND,
+} from "@/lib/static/data-departemen";
+import DepartmentCard from "../cards/departement-card";
+import Carousel from "@/components/ui/carousel";
 
 const PerkenalanDepartemen: React.FC = () => {
   return (
@@ -29,26 +30,25 @@ const PerkenalanDepartemen: React.FC = () => {
         }}
         containerClassName="md:hidden"
       >
-        {dataDepartemenRND.map((departemen) => (
-          <Card
-            key={departemen.nama}
-            deskripsi={departemen.deskripsi}
+        {dataDepartemenRND.map(({ deskripsi, gambar, nama }) => (
+          <DepartmentCard
+            key={nama}
+            description={deskripsi}
+            image={gambar}
+            name={nama}
             className="sm:flex-[0_0_50%] flex-[0_0_100%] pl-[20px]"
-          >
-            <Department nama={departemen.nama} gambar={departemen.gambar} />
-          </Card>
+          />
         ))}
       </Carousel>
 
-      <div className="grid grid-cols-3 mx-32 lg:mx-48 gap-6 lg:gap-10">
-        {dataDepartemenRND.map((departemen) => (
-          <Card
-            key={departemen.nama}
-            deskripsi={departemen.deskripsi}
-            className="hidden md:block"
-          >
-            <Department nama={departemen.nama} gambar={departemen.gambar} />
-          </Card>
+      <div className="grid-cols-3 mx-32 lg:mx-48 gap-6 lg:gap-10 hidden md:grid">
+        {dataDepartemenRND.map(({ deskripsi, gambar, nama }) => (
+          <DepartmentCard
+            key={nama}
+            description={deskripsi}
+            image={gambar}
+            name={nama}
+          />
         ))}
       </div>
 
@@ -68,26 +68,26 @@ const PerkenalanDepartemen: React.FC = () => {
         }}
         containerClassName="md:hidden"
       >
-        {dataDepartemenKeorganisasian.map((departemen) => (
-          <Card
-            key={departemen.nama}
-            deskripsi={departemen.deskripsi}
+        {dataDepartemenKeorganisasian.map(({ deskripsi, gambar, nama }) => (
+          <DepartmentCard
+            key={nama}
+            description={deskripsi}
+            image={gambar}
+            name={nama}
             className="sm:flex-[0_0_50%] flex-[0_0_100%] pl-[20px]"
-          >
-            <Department nama={departemen.nama} gambar={departemen.gambar} />
-          </Card>
+          />
         ))}
       </Carousel>
 
-      <div className="grid grid-cols-3 mx-32 lg:mx-48 gap-6 lg:gap-10 pb-20">
-        {dataDepartemenKeorganisasian.map((departemen) => (
-          <Card
-            key={departemen.nama}
-            deskripsi={departemen.deskripsi}
+      <div className="hidden md:grid grid-cols-3 mx-32 lg:mx-48 gap-6 lg:gap-10 pb-20">
+        {dataDepartemenKeorganisasian.map(({ deskripsi, gambar, nama }) => (
+          <DepartmentCard
+            key={nama}
+            description={deskripsi}
+            image={gambar}
+            name={nama}
             className="hidden md:block overflow-hidden"
-          >
-            <Department nama={departemen.nama} gambar={departemen.gambar} />
-          </Card>
+          />
         ))}
       </div>
     </div>

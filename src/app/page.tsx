@@ -1,15 +1,14 @@
 import type React from "react";
 
-import PerkenalanDepartemen from "@/components/perkenalan-departemen/perkenalan-departemen";
-import TentangKami from "@/components/tentang-kami/tentang-kami";
-
-import Hero from "@/components/home/Hero";
-import Pencapaian from "@/components/pencapaian/pencapaian";
-import ProgramKerja from "@/components/program-kerja/ProgramKerja";
-import Footer from "@/components/footer/footer";
-import BgPencapaian from "@/components/background/bg-pencapaian";
-import BgTentangKami from "@/components/background/bg-tentang-kami";
-import BgProgramKerja from "@/components/background/bg-program-kerja";
+import BgPencapaian from "@/components/home/backgrounds/bg-pencapaian";
+import BgProgramKerja from "@/components/home/backgrounds/bg-program-kerja";
+import BgTentangKami from "@/components/home/backgrounds/bg-tentang-kami";
+import Hero from "@/components/home/sections/hero";
+import Pencapaian from "@/components/home/sections/pencapaian";
+import PerkenalanDepartemen from "@/components/home/sections/perkenalan-departemen";
+import ProgramKerja from "@/components/home/sections/program-kerja";
+import TentangKami from "@/components/home/sections/tentang-kami";
+import Footer from "@/components/ui/footer";
 
 const Home: React.FC = () => {
   return (

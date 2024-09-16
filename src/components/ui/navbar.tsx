@@ -1,12 +1,12 @@
 "use client";
 
 import { useNavbarScroll } from "@/hooks/useNavbarScroll";
-import Link from "next/link";
-import { MenuIcon } from "./icons/MenuIcon";
-import POROSLogo from "../../public/logo-poros.svg";
-import Image from "next/image";
-import { useState } from "react";
+import POROSLogo from "@/public/svg/logo/poros.svg";
 import { type Variants, motion } from "framer-motion";
+import { HomeIcon, InfoIcon, LaptopIcon, MenuIcon, XIcon } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 const Navbar: React.FC = () => {
   const changeNav = useNavbarScroll();
@@ -111,7 +111,7 @@ const Navbar: React.FC = () => {
               setShowSidebar((prev) => !prev);
             }}
           >
-            <Image src={"/icon-x.svg"} alt="X Icon" fill={true} />
+            <XIcon />
           </button>
         </div>
         <div className="flex flex-col mt-10">
@@ -120,27 +120,21 @@ const Navbar: React.FC = () => {
             className="flex items-center justify-end border-b gap-5 py-4"
           >
             <span>Beranda</span>
-            <div className="w-5 h-5 relative">
-              <Image src={"/icon-home.svg"} alt="Home Icon" fill={true} />
-            </div>
+            <HomeIcon />
           </Link>
           <Link
             href={"/"}
             className="flex items-center justify-end border-b gap-5 py-4"
           >
             <span>Blogs</span>
-            <div className="w-5 h-5 relative">
-              <Image src={"/icon-blogs.svg"} alt="Blog Icon" fill={true} />
-            </div>
+            <LaptopIcon />
           </Link>
           <Link
             href={"/"}
             className="flex items-center justify-end border-b gap-5 py-4"
           >
             <span>Tentang Kami</span>
-            <div className="w-5 h-5 relative">
-              <Image src={"/icon-info.svg"} alt="Info Icon" fill={true} />
-            </div>
+            <InfoIcon />
           </Link>
         </div>
       </motion.div>

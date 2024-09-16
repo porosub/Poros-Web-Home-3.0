@@ -4,9 +4,9 @@ import type { EmblaCarouselType, EmblaOptionsType } from "embla-carousel-react";
 import useEmblaCarousel from "embla-carousel-react";
 import type { FC, PropsWithChildren } from "react";
 import { useCallback, useEffect, useState } from "react";
-import { LeftArrowIcon } from "./icons/LeftArrowIcon";
-import { RightArrowIcon } from "./icons/RightArrowIcon";
 import { cn } from "@/lib/utils";
+import { LeftArrowIcon } from "./icons/left-arrow-icon";
+import { RightArrowIcon } from "./icons/right-arrow-icon";
 
 type SliderProps = {
   containerClassName?: string;

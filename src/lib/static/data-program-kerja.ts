@@ -1,16 +1,11 @@
-interface ProkerProps {
-  imagePath: string;
-  description: string;
-}
-
-export const programKerja: ProkerProps[] = [
+export const programKerja = [
   {
-    imagePath: "/proker-cosmos.png",
+    imagePath: "/img/proker-cosmos.png",
     description:
       "COSMOS - Celebrating Open Source Movement with POROS adalah perayaan software freedom day dengan adanya seminar dan workshop CTF.",
   },
   {
-    imagePath: "/proker-codex.png",
+    imagePath: "/img/proker-codex.png",
     description:
       "CodEx (Code and Exploitation) - Coming soon! Colaboration with BCC",
   },

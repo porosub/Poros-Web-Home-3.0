@@ -7,7 +7,7 @@ const TentangKami: FC = () => {
       <section className="relative aspect-[3/5] sm:aspect-[3/4] md:aspect-[3/3] lg:aspect-[16/11] w-full px-5 md:px-10 pt-10">
         <Image
           src={"/bg-pengenalan-poros.svg"}
-          alt="tes"
+          alt="Bg Pengenalan POROS"
           fill={true}
           className="object-cover object-top -z-10"
         />
