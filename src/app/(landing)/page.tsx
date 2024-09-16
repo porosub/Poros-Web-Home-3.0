@@ -8,7 +8,6 @@ import Pencapaian from "@/components/home/sections/pencapaian";
 import PerkenalanDepartemen from "@/components/home/sections/perkenalan-departemen";
 import ProgramKerja from "@/components/home/sections/program-kerja";
 import TentangKami from "@/components/home/sections/tentang-kami";
-import Footer from "@/components/ui/footer";
 
 const Home: React.FC = () => {
   return (
@@ -30,9 +29,6 @@ const Home: React.FC = () => {
       <section className="flex mt-44 flex-col justify-center gap-10 pb-20 relative">
         <BgPencapaian />
         <Pencapaian />
-      </section>
-      <section className="flex flex-col items-center justify-center h-full">
-        <Footer />
       </section>
     </main>
   );

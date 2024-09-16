@@ -3,7 +3,6 @@ import type React from "react";
 
 import { Rubik } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/ui/navbar";
 
 const mainFont = Rubik({ subsets: ["latin"] });
 
@@ -20,10 +19,7 @@ interface IRootLayoutProps {
 const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={mainFont.className}>
-        <Navbar />
-        {children}
-      </body>
+      <body className={mainFont.className}>{children}</body>
     </html>
   );
 };
