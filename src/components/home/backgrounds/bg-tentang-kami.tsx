@@ -1,8 +1,8 @@
 import React from "react";
 import type { FC } from "react";
 import Image from "next/image";
-import Rectangle from "./rectangle";
-import Circle from "./circle";
+import Rectangle from "../fragments/rectangle";
+import Circle from "../fragments/circle";
 
 const BgTentangKami: FC = () => {
   return (
@@ -12,7 +12,7 @@ const BgTentangKami: FC = () => {
       <Circle className="absolute top-0 left-1/4 bg-[#53bc6e] md:w-14 md:h-14 w-4 h-4" />
       <Circle className="absolute bottom-0 right-1/4 bg-[#53bc6e] md:w-10 md:h-10 w-5 h-5" />
       <Image
-        src="/doughnut.svg"
+        src="/svg/fragments/doughnut.svg"
         alt="doughnut background shape"
         width={150}
         height={150}

@@ -22,6 +22,7 @@ module.exports = {
         secondaryYellow: "var(--secondary-yellow)",
         accentRed: "var(--accent-red)",
         textDarkBlue: "var(--text-darkblue)",
+        darkBlue: "var(--text-darkblue)",
         backgroundWhite: "var(--background-white)",
 
         border: "hsl(var(--border))",

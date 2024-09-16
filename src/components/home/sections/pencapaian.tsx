@@ -1,8 +1,8 @@
+import { Card } from "@/components/ui/card";
+import Carousel from "@/components/ui/carousel";
+import { dataPencapaian } from "@/lib/static/data-pencapaian";
 import React from "react";
 import type { FC } from "react";
-import Carousel from "../Carousel";
-import { Card } from "../Card";
-import { dataPencapaian } from "./data-pencapaian";
 
 const Pencapaian: FC = () => {
   return (

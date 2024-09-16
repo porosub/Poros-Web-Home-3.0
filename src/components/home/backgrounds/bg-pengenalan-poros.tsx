@@ -7,7 +7,7 @@ const BgPengenalanPoros: FC = () => {
     <>
       <div className="absolute w-full -z-10 h-screen">
         <Image
-          src={"/bg-pengenalan-poros.svg"}
+          src={"/svg/fragments/bg-pengenalan-poros.svg"}
           alt="tes"
           fill={true}
           className="object-cover"

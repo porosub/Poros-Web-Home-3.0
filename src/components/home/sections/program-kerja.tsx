@@ -1,8 +1,8 @@
-import type { FC } from "react";
-import Carousel from "../Carousel";
-import { Card } from "../Card";
+import { Card } from "@/components/ui/card";
+import Carousel from "@/components/ui/carousel";
+import { programKerja } from "@/lib/static/data-program-kerja";
 import Image from "next/image";
-import { programKerja } from "./data-program-kerja";
+import type { FC } from "react";
 
 const ProgramKerja: FC = () => {
   return (
