@@ -8,7 +8,8 @@ const BgAuth: FC = () => {
       <Image
         src={BgLogin}
         alt="bg auth"
-        className="object-cover bg-repeat h-screen "
+        className="object-cover bg-repeat h-screen"
+        fill={true}
       />
     </div>
   );

@@ -1,9 +1,10 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
 import { useForm } from "react-hook-form";
+import type { UseFormReturn } from "react-hook-form";
 import * as z from "zod";
+import { useRouter } from "next/navigation";
 
-// Data for checking validate login form
+//* Data for checking validate login form
 const dataDummy = {
   id: 1,
   email: "dummy@gmail.com",
@@ -17,8 +18,13 @@ const formSchema = z.object({
 
 export type LoginFormValues = z.infer<typeof formSchema>;
 
-const useLoginForm = (): any => {
-  const [loginError, setLoginError] = useState<string | null>(null);
+interface ILoginFormProps {
+  form: UseFormReturn<LoginFormValues>;
+  onSubmit: (values: LoginFormValues) => Promise<void>;
+}
+
+const useLoginForm = (): ILoginFormProps => {
+  const router = useRouter();
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -27,19 +33,28 @@ const useLoginForm = (): any => {
     },
   });
 
-  function onSubmit(values: LoginFormValues): void {
+  const onSubmit = async (values: LoginFormValues): Promise<void> => {
     if (
       values.email === dataDummy.email &&
       values.password === dataDummy.password
     ) {
-      setLoginError(null);
-      alert("Login successful!");
+      router.push("/admin/list-anggota");
     } else {
-      setLoginError("Email or password is incorrect");
+      form.setError("email", {
+        type: "manual",
+        message: "",
+      });
+      form.setError("password", {
+        type: "manual",
+        message: "",
+      });
+      form.setError("root", {
+        type: "manual",
+        message: "Email or password is incorrect",
+      });
     }
-  }
-
-  return { onSubmit, form, loginError, setLoginError };
+  };
+  return { onSubmit, form };
 };
 
 export default useLoginForm;
