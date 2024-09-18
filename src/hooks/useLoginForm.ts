@@ -12,8 +12,11 @@ const dataDummy = {
 };
 
 const formSchema = z.object({
-  email: z.string().email({ message: "Invalid email address" }),
-  password: z.string().min(1, { message: "Invalid password" }),
+  email: z
+    .string()
+    .min(1, { message: "Email is required!" })
+    .email({ message: "Invalid email address" }),
+  password: z.string().min(1, { message: "Password is required!" }),
 });
 
 export type LoginFormValues = z.infer<typeof formSchema>;

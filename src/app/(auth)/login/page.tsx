@@ -31,14 +31,21 @@ const LoginPage: FC = () => {
           </div>
           <div className="p-5 md:p-12 md:w-1/2 my-auto">
             <h2 className=" pb-4 md:pb-6 text-4xl font-bold text-gray-800 md:text-start text-center [text-shadow:_0_3px_0_rgb(0_0_0_/_20%)]">
-              User login
+              User Login
             </h2>
             <Form {...form}>
-              {/* //? sisa Promise-returning function provided to attribute where a void return was expected. udah aku coba pake async IIFE wrapper tetep gabisa */}
               <form
-                onSubmit={form.handleSubmit(onSubmit)}
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  void form.handleSubmit(onSubmit)(e);
+                }}
                 className="space-y-4"
               >
+                {errors.root != null && (
+                  <p className="text-sm bg-red-100 p-3 rounded-lg text-red-500 font-medium">
+                    {errors.root.message}
+                  </p>
+                )}
                 <FormField
                   control={form.control}
                   name="email"
@@ -81,17 +88,13 @@ const LoginPage: FC = () => {
                     </FormItem>
                   )}
                 />
-                {errors.root != null && (
-                  <p className="text-sm text-red-500 font-bold">
-                    {errors.root.message}
-                  </p>
-                )}
+
                 <div className="pt-6">
                   <Button
                     type="submit"
                     className="w-full py-6 bg-green-500 hover:bg-green-600 text-white"
                   >
-                    Sign in
+                    Masuk
                   </Button>
                 </div>
               </form>
