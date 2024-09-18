@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 import {
   DialogClose,
   DialogContent,
@@ -9,7 +9,7 @@ import {
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 
-const Modal = () => {
+const Modal: React.FC = () => {
   return (
     <DialogContent>
       <DialogHeader>
@@ -63,7 +63,7 @@ const Modal = () => {
         </div>
       </form>
 
-      <DialogClose asChild>
+      <DialogClose asChild={true}>
         <Button className="mt-4 bg-[#29AC4A]">Save</Button>
       </DialogClose>
     </DialogContent>

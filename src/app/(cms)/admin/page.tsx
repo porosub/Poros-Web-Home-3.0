@@ -20,13 +20,13 @@ const AdminPage: FC = () => {
     currentPage * ITEMS_PER_PAGE,
   );
 
-  const handlePrevPage = () => {
+  const handlePrevPage = (): void => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
     }
   };
 
-  const handleNextPage = () => {
+  const handleNextPage = (): void => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
     }
@@ -43,7 +43,7 @@ const AdminPage: FC = () => {
           </Button>
 
           <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-            <DialogTrigger asChild>
+            <DialogTrigger asChild={true}>
               <Button className="bg-[#29AC4A]">
                 <Plus className="w-5" />
                 <span className="ml-2">Add</span>

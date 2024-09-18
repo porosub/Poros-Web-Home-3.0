@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 
-const Sidebar = () => {
+const Sidebar = (): JSX.Element => {
   const [activeItem, setActiveItem] = useState(0);
 
   return (
@@ -12,7 +12,9 @@ const Sidebar = () => {
       <Link href="/admin">
         <div
           className="flex px-14 py-10 items-center justify-center gap-3 "
-          onClick={() => setActiveItem(0)}
+          onClick={() => {
+            setActiveItem(0);
+          }}
         >
           <Image
             src="/svg/logo/poros-plain.svg"
@@ -33,7 +35,9 @@ const Sidebar = () => {
                   ? "bg-[#29AC4A] text-white"
                   : "hover:bg-[#29AC4A] hover:text-white"
               }`}
-              onClick={() => setActiveItem(0)}
+              onClick={() => {
+                setActiveItem(0);
+              }}
             >
               <Users2 />
               <span>List Anggota</span>
@@ -46,7 +50,9 @@ const Sidebar = () => {
                   ? "bg-[#29AC4A] text-white"
                   : "hover:bg-[#29AC4A] hover:text-white"
               }`}
-              onClick={() => setActiveItem(1)}
+              onClick={() => {
+                setActiveItem(1);
+              }}
             >
               <FileText />
               <span>Blog</span>
