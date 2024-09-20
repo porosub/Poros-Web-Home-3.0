@@ -1,19 +1,19 @@
 "use client";
 import { LogOut, FileText, Users2 } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
 import Link from "next/link";
+import useActiveTab from "@/hooks/useActiveTab";
 
 const Sidebar = (): JSX.Element => {
-  const [activeItem, setActiveItem] = useState(0);
+  const { activeTab, handleTabClick } = useActiveTab();
 
   return (
     <div className="w-64 bg-white flex flex-col">
-      <Link href="/admin">
+      <Link href="/admin?tab=0">
         <div
           className="flex px-14 py-10 items-center justify-center gap-3 "
           onClick={() => {
-            setActiveItem(0);
+            handleTabClick("0");
           }}
         >
           <Image
@@ -27,31 +27,31 @@ const Sidebar = (): JSX.Element => {
       </Link>
 
       <div className="flex-1">
-        <ul className="text-lg font-normal w-full grid grid-cols-1 gap-y-3">
-          <Link href="/admin">
+        <ul className="text-base font-normal w-full grid grid-cols-1 gap-y-3">
+          <Link href="/admin?tab=0">
             <li
               className={`flex items-center gap-6 p-3 rounded-md w-3/4 mx-auto transition-colors duration-200 cursor-pointer ${
-                activeItem === 0
-                  ? "bg-[#29AC4A] text-white"
-                  : "hover:bg-[#29AC4A] hover:text-white"
+                activeTab === "0"
+                  ? "bg-primaryGreen text-white"
+                  : "hover:bg-gray-200"
               }`}
               onClick={() => {
-                setActiveItem(0);
+                handleTabClick("0");
               }}
             >
               <Users2 />
               <span>List Anggota</span>
             </li>
           </Link>
-          <Link href="/admin/blog">
+          <Link href="/admin/blog?tab=1">
             <li
               className={`flex items-center gap-6 p-3 rounded-md w-3/4 mx-auto transition-colors duration-200 cursor-pointer ${
-                activeItem === 1
-                  ? "bg-[#29AC4A] text-white"
-                  : "hover:bg-[#29AC4A] hover:text-white"
+                activeTab === "1"
+                  ? "bg-primaryGreen text-white"
+                  : "hover:bg-gray-200"
               }`}
               onClick={() => {
-                setActiveItem(1);
+                handleTabClick("1");
               }}
             >
               <FileText />
