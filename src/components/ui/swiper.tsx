@@ -5,19 +5,19 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
-import { FC, PropsWithChildren } from "react";
+import { useRef } from "react";
+import type { FC, PropsWithChildren } from "react";
 import { LeftArrowIcon } from "./icons/left-arrow-icon";
 import { RightArrowIcon } from "./icons/right-arrow-icon";
 import dynamic from "next/dynamic";
-const Swiper = dynamic(() => import("swiper/react").then(mod => mod.Swiper), {
-    ssr: false,
-  });
+
+const Swiper = dynamic(async () => (await import("swiper/react")).Swiper, {
+  ssr: false,
+});
 
 type SwiperProps = {
   containerClassName?: string;
   className?: string;
-  slidesPerView?: number;
-  spaceBetween?: number;
   speed?: number;
   navigationId?: string;
 } & PropsWithChildren;
@@ -25,17 +25,19 @@ type SwiperProps = {
 const CustomSwiper: FC<SwiperProps> = ({
   containerClassName,
   className,
-  slidesPerView = 1,
-  spaceBetween = 20,
   speed = 1000,
   navigationId = "default",
   children,
 }) => {
+  const prevBtnRef = useRef<HTMLButtonElement>(null);
+  const nextBtnRef = useRef<HTMLButtonElement>(null);
+
   return (
     <div className={`flex justify-center ${containerClassName}`}>
       {/* Tombol navigasi kiri */}
       <div className="flex items-center pl-5">
         <button
+          ref={prevBtnRef}
           type="button"
           className={`custom-prev-btn-${navigationId} h-fit flex justify-center items-center w-16 md:w-20 text-red-500 disabled:text-gray-400`}
         >
@@ -46,8 +48,7 @@ const CustomSwiper: FC<SwiperProps> = ({
       {/* Swiper */}
       <Swiper
         modules={[Navigation]}
-        slidesPerView={slidesPerView}
-        spaceBetween={spaceBetween}
+        slidesPerView="auto"
         navigation={{
           prevEl: `.custom-prev-btn-${navigationId}`,
           nextEl: `.custom-next-btn-${navigationId}`,
@@ -63,6 +64,7 @@ const CustomSwiper: FC<SwiperProps> = ({
       {/* Tombol navigasi kanan */}
       <div className="flex items-center pr-5">
         <button
+          ref={nextBtnRef}
           type="button"
           className={`custom-next-btn-${navigationId} h-fit flex justify-center items-center w-16 md:w-20 text-red-500 disabled:text-gray-400`}
         >
