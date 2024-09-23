@@ -65,12 +65,7 @@ export function DataTable({
               ))
             ) : (
               <TableRow>
-                <TableCell
-                  // colSpan={table.columns.length}
-                  className="h-24 text-center"
-                >
-                  No results.
-                </TableCell>
+                <TableCell className="h-24 text-center">No results.</TableCell>
               </TableRow>
             )}
           </TableBody>

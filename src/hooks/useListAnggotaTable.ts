@@ -38,7 +38,7 @@ export const useListAnggotaTable = ({
         typeof updater === "function"
           ? updater(table.getState().pagination).pageIndex + 1
           : updater.pageIndex + 1;
-      router.push(`?tab=0&page=${newPage}`);
+      router.push(`?page=${newPage}`);
     },
   });
 
