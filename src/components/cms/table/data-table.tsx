@@ -1,14 +1,8 @@
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
+
 "use client";
 
-import type React from "react";
-import { useRouter, useSearchParams } from "next/navigation";
-import {
-  flexRender,
-  getCoreRowModel,
-  getPaginationRowModel,
-  useReactTable,
-} from "@tanstack/react-table";
-import type { ColumnDef } from "@tanstack/react-table";
+import { Button } from "@/components/ui/button";
 import {
   Table,
   TableBody,
@@ -23,44 +17,15 @@ import {
   DoubleArrowLeftIcon,
   DoubleArrowRightIcon,
 } from "@radix-ui/react-icons";
-import { Button } from "@/components/ui/button";
+import type { Table as TTable } from "@tanstack/react-table";
+import { flexRender } from "@tanstack/react-table";
+import type React from "react";
 
-interface DataTableProps<TData, TValue> {
-  columns: Array<ColumnDef<TData, TValue>>;
-  data: TData[];
-}
-
-export function DataTable<TData, TValue>({
-  columns,
-  data,
-}: DataTableProps<TData, TValue>): React.JSX.Element {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const currentPage = Number(searchParams.get("page"));
-  const validCurrentPage =
-    !Number.isNaN(currentPage) && currentPage > 0 ? currentPage : 1;
-
-  const table = useReactTable({
-    data,
-    columns,
-    pageCount: Math.ceil(data.length / 10),
-    getCoreRowModel: getCoreRowModel(),
-    getPaginationRowModel: getPaginationRowModel(),
-    state: {
-      pagination: {
-        pageIndex: validCurrentPage - 1,
-        pageSize: 6,
-      },
-    },
-    onPaginationChange: (updater) => {
-      const newPage =
-        typeof updater === "function"
-          ? updater(table.getState().pagination).pageIndex + 1
-          : updater.pageIndex + 1;
-      router.push(`?tab=0&page=${newPage}`);
-    },
-  });
-
+export function DataTable({
+  table,
+}: {
+  table: TTable<any>;
+}): React.JSX.Element {
   return (
     <div>
       <div className="rounded-md border">
@@ -86,7 +51,7 @@ export function DataTable<TData, TValue>({
               table.getRowModel().rows.map((row) => (
                 <TableRow
                   key={row.id}
-                  data-state={row.getIsSelected() && "selected"}
+                  data-state={Boolean(row.getIsSelected()) && "selected"}
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
@@ -101,7 +66,7 @@ export function DataTable<TData, TValue>({
             ) : (
               <TableRow>
                 <TableCell
-                  colSpan={columns.length}
+                  // colSpan={table.columns.length}
                   className="h-24 text-center"
                 >
                   No results.
@@ -118,7 +83,7 @@ export function DataTable<TData, TValue>({
           {table.getFilteredRowModel().rows.length} row(s) selected.
         </div>
         <div className="flex items-center space-x-6 lg:space-x-8">
-          <div className="flex w-[100px] items-center justify-center text-sm font-medium">
+          <div className="flex w-[100px] items-center justify-center text-sm">
             Page {table.getState().pagination.pageIndex + 1} of{" "}
             {table.getPageCount()}
           </div>

@@ -1,24 +1,11 @@
+import { DialogClose, DialogContent } from "@/components/ui/dialog";
 import type React from "react";
-import {
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import { Input } from "../ui/input";
 
 const Modal: React.FC = () => {
   return (
     <DialogContent>
-      <DialogHeader>
-        <DialogTitle>Add New Member</DialogTitle>
-        <DialogDescription>
-          Fill in the details of the new member.
-        </DialogDescription>
-      </DialogHeader>
-
       <form className="space-y-4">
         <div>
           <label
@@ -57,14 +44,14 @@ const Modal: React.FC = () => {
           >
             Foto
           </label>
-          <Button variant="secondary" className="mt-3 font-normal">
+          <Button variant="ghost" className="mt-3 font-normal">
             Add File
           </Button>
         </div>
       </form>
 
       <DialogClose asChild={true}>
-        <Button className="mt-4 bg-[#29AC4A]">Save</Button>
+        <Button className="mt-4">Simpan</Button>
       </DialogClose>
     </DialogContent>
   );

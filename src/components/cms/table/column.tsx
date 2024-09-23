@@ -1,19 +1,17 @@
-// Define the Anggota type
 import type { ColumnDef } from "@tanstack/react-table";
 import { Checkbox } from "@/components/ui/checkbox";
 import { PenBoxIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-// Define the type for Anggota
-export type Anggota = {
+export interface Anggota {
   id: number;
   nama: string;
   foto: string;
   jabatan: string;
   divisi: string;
-};
+}
 
 // Define the columns
-// Define the columns using Array<T> instead of T[]
 export const columns: Array<ColumnDef<Anggota>> = [
   {
     id: "select",
@@ -55,6 +53,10 @@ export const columns: Array<ColumnDef<Anggota>> = [
   {
     id: "action",
     header: "Action",
-    cell: ({ row }) => <PenBoxIcon />,
+    cell: ({ row }) => (
+      <Button variant={"secondary"} className="px-2 aspect-square">
+        <PenBoxIcon strokeWidth="1.7" className="w-5 h-5" />
+      </Button>
+    ),
   },
 ];

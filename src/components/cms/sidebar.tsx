@@ -1,23 +1,19 @@
 "use client";
-import { LogOut, FileText, Users2 } from "lucide-react";
+import { Laptop2, LogOut, Users2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import useActiveTab from "@/hooks/useActiveTab";
+import { usePathname } from "next/navigation";
+import { Button } from "../ui/button";
 
 const Sidebar = (): JSX.Element => {
-  const { activeTab, handleTabClick } = useActiveTab();
+  const pathName = usePathname();
 
   return (
-    <div className="w-64 bg-white flex flex-col">
-      <Link href="/admin?tab=0">
-        <div
-          className="flex px-14 py-10 items-center justify-center gap-3 "
-          onClick={() => {
-            handleTabClick("0");
-          }}
-        >
+    <div className="w-64 bg-white flex flex-col p-5 gap-5">
+      <Link href="/admin" className="pb-5 border-b">
+        <div className="flex items-center justify-center gap-3 ">
           <Image
-            src="/svg/logo/poros-plain.svg"
+            src="/svg/logo/poros.svg"
             width={40}
             height={40}
             alt="Logo Poros"
@@ -26,49 +22,39 @@ const Sidebar = (): JSX.Element => {
         </div>
       </Link>
 
-      <div className="flex-1">
-        <ul className="text-base font-normal w-full grid grid-cols-1 gap-y-3">
-          <Link href="/admin?tab=0">
+      <nav className="flex-1">
+        <ul className="text-base font-medium w-full grid grid-cols-1">
+          <Link href="/admin">
             <li
-              className={`flex items-center gap-6 p-3 rounded-md w-3/4 mx-auto transition-colors duration-200 cursor-pointer ${
-                activeTab === "0"
+              className={`flex items-center gap-3 p-3 rounded-md transition-colors duration-200 cursor-pointer ${
+                pathName === "/admin"
                   ? "bg-primaryGreen text-white"
                   : "hover:bg-gray-200"
               }`}
-              onClick={() => {
-                handleTabClick("0");
-              }}
             >
               <Users2 />
               <span>List Anggota</span>
             </li>
           </Link>
-          <Link href="/admin/blog?tab=1">
+          <Link href="/admin/blog">
             <li
-              className={`flex items-center gap-6 p-3 rounded-md w-3/4 mx-auto transition-colors duration-200 cursor-pointer ${
-                activeTab === "1"
+              className={`flex items-center gap-3 p-3 rounded-md transition-colors duration-200 cursor-pointer ${
+                pathName === "/admin/blog"
                   ? "bg-primaryGreen text-white"
                   : "hover:bg-gray-200"
               }`}
-              onClick={() => {
-                handleTabClick("1");
-              }}
             >
-              <FileText />
+              <Laptop2 />
               <span>Blog</span>
             </li>
           </Link>
         </ul>
-      </div>
+      </nav>
 
-      <Link href="/">
-        <div className="text-lg font-normal">
-          <div className="flex items-center gap-6 p-4 rounded-md w-3/4 mx-auto mb-4 hover:bg-slate-200 transition-colors duration-200 text-[#C40027] cursor-pointer">
-            <LogOut />
-            <span>Logout</span>
-          </div>
-        </div>
-      </Link>
+      <Button className="flex items-center gap-3 p-4 rounded-md hover:bg-destructive/90 hover:text-white bg-transparent transition-colors duration-200 text-destructive cursor-pointer">
+        <LogOut className="w-5 h-5" />
+        <span>Log out</span>
+      </Button>
     </div>
   );
 };
