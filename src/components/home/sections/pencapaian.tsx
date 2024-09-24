@@ -1,8 +1,8 @@
+"use client";
 import { Card } from "@/components/ui/card";
-import Carousel from "@/components/ui/carousel";
 import { dataPencapaian } from "@/lib/static/data-pencapaian";
-import React from "react";
 import type { FC } from "react";
+import CustomSwiper, { SwiperSlide } from "@/components/ui/swiper";
 
 const Pencapaian: FC = () => {
   return (
@@ -13,19 +13,22 @@ const Pencapaian: FC = () => {
       >
         Pencapaian
       </h2>
-      <Carousel
-        options={{ dragFree: false, align: "start" }}
-        containerClassName="lg:mx-32"
-      >
+
+      {/* Custom Swiper */}
+      <CustomSwiper containerClassName="lg:mx-32" navigationId="pencapaian">
         {dataPencapaian.map((pencapaian, i) => (
-          <Card
+          <SwiperSlide
             key={i}
-            deskripsi={pencapaian.deskripsi}
-            gambar={pencapaian.gambar}
-            className="sm:flex-[0_0_33%] flex-[0_0_100%] pl-[20px]"
-          />
+            className="sm:flex-[0_0_33%] flex-[0_0_100%] px-[10px]"
+          >
+            <Card
+              deskripsi={pencapaian.deskripsi}
+              gambar={pencapaian.gambar}
+              className="h-full"
+            />
+          </SwiperSlide>
         ))}
-      </Carousel>
+      </CustomSwiper>
     </>
   );
 };

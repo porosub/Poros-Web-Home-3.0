@@ -7,7 +7,7 @@ import {
   dataDepartemenRND,
 } from "@/lib/static/data-departemen";
 import DepartmentCard from "../cards/departement-card";
-import Carousel from "@/components/ui/carousel";
+import CustomSwiper, { SwiperSlide } from "@/components/ui/swiper";
 
 const PerkenalanDepartemen: React.FC = () => {
   return (
@@ -22,24 +22,22 @@ const PerkenalanDepartemen: React.FC = () => {
           Departemen <span>R&D</span>
         </h2>
       </div>
-
-      <Carousel
-        options={{
-          dragFree: false,
-          align: "start",
-        }}
-        containerClassName="md:hidden"
-      >
-        {dataDepartemenRND.map(({ deskripsi, gambar, nama }) => (
-          <DepartmentCard
-            key={nama}
-            description={deskripsi}
-            image={gambar}
-            name={nama}
-            className="sm:flex-[0_0_50%] flex-[0_0_100%] pl-[20px]"
-          />
+      <CustomSwiper containerClassName="md:hidden" navigationId="perkenalan">
+        {dataDepartemenRND.map(({ deskripsi, gambar, nama }, index) => (
+          <SwiperSlide
+            key={index}
+            className="sm:flex-[0_0_50%] flex-[0_0_100%] px-[10px]"
+          >
+            <DepartmentCard
+              key={nama}
+              description={deskripsi}
+              image={gambar}
+              name={nama}
+              className="h-full"
+            />
+          </SwiperSlide>
         ))}
-      </Carousel>
+      </CustomSwiper>
 
       <div className="grid-cols-3 mx-32 lg:mx-48 gap-6 lg:gap-10 hidden md:grid">
         {dataDepartemenRND.map(({ deskripsi, gambar, nama }) => (
@@ -60,24 +58,27 @@ const PerkenalanDepartemen: React.FC = () => {
           Departemen <span>Keorganisasian</span>
         </h2>
       </div>
-
-      <Carousel
-        options={{
-          dragFree: false,
-          align: "start",
-        }}
+      <CustomSwiper
         containerClassName="md:hidden"
+        navigationId="keorganisasian"
       >
-        {dataDepartemenKeorganisasian.map(({ deskripsi, gambar, nama }) => (
-          <DepartmentCard
-            key={nama}
-            description={deskripsi}
-            image={gambar}
-            name={nama}
-            className="sm:flex-[0_0_50%] flex-[0_0_100%] pl-[20px]"
-          />
-        ))}
-      </Carousel>
+        {dataDepartemenKeorganisasian.map(
+          ({ deskripsi, gambar, nama }, index) => (
+            <SwiperSlide
+              key={index}
+              className="sm:flex-[0_0_50%] flex-[0_0_100%] px-[10px]"
+            >
+              <DepartmentCard
+                key={nama}
+                description={deskripsi}
+                image={gambar}
+                name={nama}
+                className="h-full"
+              />
+            </SwiperSlide>
+          ),
+        )}
+      </CustomSwiper>
 
       <div className="hidden md:grid grid-cols-3 mx-32 lg:mx-48 gap-6 lg:gap-10 pb-20">
         {dataDepartemenKeorganisasian.map(({ deskripsi, gambar, nama }) => (

@@ -1,8 +1,9 @@
+"use client";
 import { Card } from "@/components/ui/card";
-import Carousel from "@/components/ui/carousel";
 import { programKerja } from "@/lib/static/data-program-kerja";
 import Image from "next/image";
 import type { FC } from "react";
+import CustomSwiper, { SwiperSlide } from "@/components/ui/swiper";
 
 const ProgramKerja: FC = () => {
   return (
@@ -10,17 +11,10 @@ const ProgramKerja: FC = () => {
       <h2 className="font-bold text-white text-5xl text-center px-5 md:px-20">
         Program Kerja
       </h2>
-      <Carousel
-        options={{ dragFree: false, align: "start" }}
-        containerClassName="lg:px-56"
-      >
-        {programKerja.map(({ description, imagePath }, index) => {
-          return (
-            <Card
-              key={index}
-              className="flex-[0_0_100%] pl-[20px]"
-              deskripsi={description}
-            >
+      <CustomSwiper containerClassName="lg:px-56" navigationId="programKerja">
+        {programKerja.map(({ description, imagePath }, index) => (
+          <SwiperSlide key={index} className="flex-[0_0_100%] px-[10px]">
+            <Card deskripsi={description} className="h-full">
               <div className="relative w-full aspect-video overflow-hidden bg-gray-500 rounded-md">
                 <Image
                   src={imagePath}
@@ -31,9 +25,9 @@ const ProgramKerja: FC = () => {
                 />
               </div>
             </Card>
-          );
-        })}
-      </Carousel>
+          </SwiperSlide>
+        ))}
+      </CustomSwiper>
     </>
   );
 };
