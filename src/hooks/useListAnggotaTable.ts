@@ -9,11 +9,13 @@ import type { ColumnDef, Table } from "@tanstack/react-table";
 interface DataTableProps<TData, TValue> {
   columns: Array<ColumnDef<TData, TValue>>;
   data: TData[];
+  searchQuery?: string;
 }
 
 export const useListAnggotaTable = ({
   columns,
   data,
+  searchQuery = "",
 }: DataTableProps<any, any>): Table<any> => {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -38,7 +40,13 @@ export const useListAnggotaTable = ({
         typeof updater === "function"
           ? updater(table.getState().pagination).pageIndex + 1
           : updater.pageIndex + 1;
-      router.push(`?page=${newPage}`);
+
+      const queryParams = new URLSearchParams();
+      queryParams.set("page", newPage.toString());
+      if (searchQuery !== "") {
+        queryParams.set("search", searchQuery);
+      }
+      router.push(`?${queryParams.toString()}`);
     },
   });
 

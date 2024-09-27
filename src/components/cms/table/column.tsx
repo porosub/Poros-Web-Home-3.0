@@ -11,15 +11,22 @@ export interface Anggota {
   divisi: string;
 }
 
-// Define the columns
-export const columns: Array<ColumnDef<Anggota>> = [
+interface ColumnProps {
+  setSelectedAnggota: (anggota: Anggota) => void;
+  setIsEditModalOpen: (open: boolean) => void;
+}
+
+export const getColumns = ({
+  setSelectedAnggota,
+  setIsEditModalOpen,
+}: ColumnProps): Array<ColumnDef<Anggota>> => [
   {
     id: "select",
     header: ({ table }) => (
       <Checkbox
         checked={table.getIsAllRowsSelected()}
         onCheckedChange={(value) => {
-          table.toggleAllRowsSelected(value === true); // Explicitly check for boolean true
+          table.toggleAllRowsSelected(value === true);
         }}
         aria-label="Select all"
       />
@@ -28,7 +35,7 @@ export const columns: Array<ColumnDef<Anggota>> = [
       <Checkbox
         checked={row.getIsSelected()}
         onCheckedChange={(value) => {
-          row.toggleSelected(value === true); // Explicitly check for boolean true
+          row.toggleSelected(value === true);
         }}
         aria-label="Select row"
       />
@@ -54,7 +61,14 @@ export const columns: Array<ColumnDef<Anggota>> = [
     id: "action",
     header: "Action",
     cell: ({ row }) => (
-      <Button variant={"secondary"} className="px-2 aspect-square">
+      <Button
+        variant={"secondary"}
+        className="px-2 aspect-square"
+        onClick={() => {
+          setSelectedAnggota(row.original); // Set data anggota yang dipilih
+          setIsEditModalOpen(true); // Buka modal edit
+        }}
+      >
         <PenBoxIcon strokeWidth="1.7" className="w-5 h-5" />
       </Button>
     ),
