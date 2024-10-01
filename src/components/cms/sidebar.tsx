@@ -4,9 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "../ui/button";
+import useAuth from "@/hooks/useAuth";
+import type { FC } from "react";
 
-const Sidebar = (): JSX.Element => {
+const Sidebar: FC = () => {
   const pathName = usePathname();
+  const { logout } = useAuth();
 
   return (
     <div className="w-64 bg-white flex flex-col p-5 gap-5">
@@ -51,7 +54,12 @@ const Sidebar = (): JSX.Element => {
         </ul>
       </nav>
 
-      <Button className="flex items-center gap-3 p-4 rounded-md hover:bg-destructive/90 hover:text-white bg-transparent transition-colors duration-200 text-destructive cursor-pointer">
+      <Button
+        onClick={() => {
+          void logout();
+        }}
+        className="flex items-center gap-3 p-4 rounded-md hover:bg-destructive/90 hover:text-white bg-transparent transition-colors duration-200 text-destructive cursor-pointer"
+      >
         <LogOut className="w-5 h-5" />
         <span>Log out</span>
       </Button>
