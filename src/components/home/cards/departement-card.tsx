@@ -15,17 +15,14 @@ const DepartmentCard: FC<DepartmenCardtProps> = ({
   ...resProps
 }) => {
   return (
-    <Card deskripsi={description} {...resProps}>
-      <div className="w-full mt-4 aspect-video md:aspect-square flex justify-center rounded-lg relative">
-        <h3 className="-translate-y-1/2 h-fit bg-primaryGreen p-2 rounded-full text-primaryGreenForeground font-semibold text-[20px] z-10">
+    <Card deskripsi={description} {...resProps} className="text-base">
+      <div className="w-full mt-1 aspect-video md:aspect-square flex flex-col gap-4 items-center justify-center rounded-lg relative">
+        <h3 className="text-center h-fit w-full bg-primaryGreen py-2 px-4 rounded-full text-primaryGreenForeground font-semibold text-[20px] z-10">
           {name}
         </h3>
-        <Image
-          fill={true}
-          src={image}
-          alt={`${name} image`}
-          className="absolute inset-0 object-contain p-4 mt-6"
-        />
+        <div className="relative w-4/5 aspect-square">
+          <Image fill={true} src={image} alt={`${name} image`} />
+        </div>
       </div>
     </Card>
   );

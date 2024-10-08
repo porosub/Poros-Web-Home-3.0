@@ -15,7 +15,7 @@ const Home: React.FC = () => {
       <section>
         <Hero />
       </section>
-      <section className="flex flex-col items-center justify-center mb-24 relative">
+      <section className="flex flex-col items-center justify-center mb-24 mt-20 relative">
         <BgTentangKami />
         <TentangKami />
       </section>

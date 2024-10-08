@@ -1,35 +1,48 @@
-import React from "react";
-import type { FC } from "react";
-import Image from "next/image";
-import { HeroLeftElement } from "../fragments/hero-left-element";
-import { HeroLeftElementMobile } from "../fragments/hero-left-element-mobile";
-import { HeroRightElement } from "../fragments/hero-right-element";
-import { HeroRightElementMobile } from "../fragments/hero-right-element-mobile";
+/* eslint-disable react/jsx-max-props-per-line */
+"use client";
+
+import { Badge } from "@/components/ui/badge";
+import { useBannerParallax } from "@/hooks/useBannerParallax";
+import { ChevronDown } from "lucide-react";
+import { type FC } from "react";
+import { Link } from "react-scroll";
 
 const Hero: FC = () => {
+  const { videoRef, scrollY } = useBannerParallax();
+
   return (
-    <div className="flex h-[32rem] md:h-screen relative bg-radial-gradient z-[-1]">
-      <HeroLeftElement className="hidden md:block absolute top-0 h-fit -z-10 -left-[40%] md:left-0" />
-      <HeroLeftElementMobile className="-z-10 absolute md:hidden top-0 left-0" />
-      <div className="flex justify-center w-full items-center md:mr-[40%] lg:mr-[20%]">
-        <div className="w-32 -translate-y-16 aspect-square md:hidden relative">
-          <Image
-            src={"/svg/logo/poros.svg"}
-            alt="Logo POROS"
-            fill={true}
-            priority={true}
-          />
-        </div>
-        <h1 className="font-bold text-8xl hidden md:block text-textDarkBlue">
-          POROS
-        </h1>
-      </div>
-      <HeroRightElement className="h-fit hidden md:block absolute -z-10 -right-[130%] md:-right-32 lg:-right-5" />
-      <HeroRightElementMobile className="h-fit -z-10 absolute md:hidden -top-10 right-0" />
-      <div className="w-52 lg:w-64 hidden md:block aspect-square absolute right-32 top-32">
-        <Image src={"/svg/logo/poros.svg"} alt="Logo POROS" fill={true} />
-      </div>
-    </div>
+    <section className="flex flex-col px-5 overflow-hidden gap-10 justify-center items-center text-white text-center h-screen relative">
+      <video
+        ref={videoRef}
+        autoPlay={true}
+        loop={true}
+        muted={true}
+        src="/videos/banner-video.mp4"
+        className="absolute w-full h-full object-cover -z-20 brightness-[.3]"
+        style={{
+          transform: `translateY(${scrollY * 0.35}px)`,
+        }}
+      />
+
+      <h1>
+        <span className="text-5xl md:text-8xl font-bold">POROS</span> <br />{" "}
+        <span className="text-3xl md:text-6xl font-semibold">
+          Organization of Open Source
+        </span>
+      </h1>
+      <Badge className="text-xl md:text-2xl font-medium">
+        #OpenSourceLeadToFuture
+      </Badge>
+      <Link
+        to="home-about"
+        smooth={true}
+        duration={900}
+        offset={-100}
+        className="absolute bottom-5 text-white active:translate-y-2 transition-all duration-150"
+      >
+        <ChevronDown className="w-10 h-10" />
+      </Link>
+    </section>
   );
 };
 
