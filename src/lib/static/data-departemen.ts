@@ -3,7 +3,7 @@ export const dataDepartemenKeorganisasian = [
     nama: "Multimedia",
     gambar: "/svg/divisions/div-multimedia.svg",
     deskripsi:
-      "Bertanggung jawab dalam pengembangan ilmu di bidang IT yang berorientasi pada kultur DevSecOps",
+      "Bertanggung jawab membuat konten visual kreatif untuk mendukung promosi dan komunikasi",
   },
   {
     nama: "Humas",
@@ -24,18 +24,18 @@ export const dataDepartemenRND = [
     nama: "Front-End",
     gambar: "/svg/divisions/div-frontend.svg",
     deskripsi:
-      "Membuat dan mengimplementasi -kan tampilan pada aplikasi web maupun mobile yang responsive dan user friendly",
+      "Merancang  antarmuka aplikasi yang responsif dan ramah pengguna, serta memastikan pengalaman yang optimal di berbagai perangkat",
   },
   {
     nama: "Back-End",
     gambar: "/svg/divisions/div-backend.svg",
     deskripsi:
-      "Mengembangkan API, deploy aplikasi, dan melakukan pemrosesan data berdasarkan logika bisnis yang diperlukan",
+      "Mengembangkan API, melakukan deployment, dan memproses data sesuai logika bisnis yang dibutuhkan untuk operasional sistem",
   },
   {
     nama: "Security",
     gambar: "/svg/divisions/div-security.svg",
     deskripsi:
-      "Menerapkan metode untuk meningkatkan keamanan sistem melalui kolaborasi dengan divisi front-end dan back-end",
+      "Memastikan keamanan sistem dengan menerapkan protokol perlindungan melalui kolaborasi dengan tim front-end dan back-end",
   },
 ];

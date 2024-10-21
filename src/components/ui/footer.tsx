@@ -1,8 +1,8 @@
+import { LinkedinIcon } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
 import { Button } from "../ui/button";
 import { InstagramIcon } from "./icons/instagram-icon";
-import { TwitterIcon } from "./icons/twitter.icon";
 import { YoutubeIcon } from "./icons/youtube-icon";
 
 const Footer: React.FC = () => {
@@ -15,38 +15,46 @@ const Footer: React.FC = () => {
           <div className="text-[var(--Secondary,#FFD633)] text-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] font-rubik text-[15px] md:text-[20px] font-medium">
             Temui Kami
           </div>
-          <div className="mt-2 text-[#FAFAFA] font-rubik text-[10px] md:text-[16px] font-normal ">
-            Gedung Kreativitas Mahasiswa Lt 2 Fakultas Ilmu Komputer Universitas
-            Brawijaya Jalan Veteran Nomor 8, Lowokwaru, Malang, Jawa Timur 65145
-            Email : porosub@gmail.com
+          <div className="mt-2 text-[#FAFAFA] font-rubik text-[10px] md:text-[16px] font-normal space-y-2">
+            <p>
+              Gedung Kreativitas Mahasiswa Lt 2 Fakultas Ilmu Komputer
+              Universitas Brawijaya Jalan Veteran Nomor 8, Lowokwaru, Malang,
+              Jawa Timur 65145
+            </p>
+            <p>
+              Email :{" "}
+              <a href="mailto:porosub@gmail.com" className="hover:underline">
+                porosub@gmail.com
+              </a>
+            </p>
           </div>
         </div>
 
-        <div className="flex flex-col">
-          <div className="text-[var(--Secondary,#FFD633)] text-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] font-rubik text-[15px] md:text-[20px] font-medium">
+        <div className="flex flex-col gap-2">
+          <h3 className="text-[var(--Secondary,#FFD633)] text-shadow-[0px_4px_4px_rgba(0,0,0,0.25)] font-rubik text-[15px] md:text-[20px] font-medium">
             Kunjungi
-          </div>
-          <Button
-            variant="link"
+          </h3>
+          <Link
+            href="/"
             about="to home page"
-            className="mt-2 w-fit p-0 text-[var(--variasi,#FF6464)] font-rubik text-[10px] md:text-[16px]"
+            className="w-fit font-medium hover:underline text-[var(--variasi,#FF6464)] font-rubik text-[10px] md:text-base"
           >
             Beranda &gt;
-          </Button>
-          <Button
-            variant="link"
+          </Link>
+          <Link
+            href="/blog"
             about="to blogs page"
-            className="mt-2 w-fit p-0 text-[var(--variasi,#FF6464)] font-rubik text-[10px] md:text-[16px]"
+            className="w-fit font-medium hover:underline text-[var(--variasi,#FF6464)] font-rubik text-[10px] md:text-base"
           >
             Blogs &gt;
-          </Button>
-          <Button
-            variant="link"
+          </Link>
+          <Link
+            href="/tentang-kami"
             about="to about us page"
-            className="mt-2 w-fit p-0 text-[var(--variasi,#FF6464)] font-rubik text-[10px] md:text-[16px]"
+            className="w-fit font-medium hover:underline text-[var(--variasi,#FF6464)] font-rubik text-[10px] md:text-base"
           >
             Tentang Kami &gt;
-          </Button>
+          </Link>
         </div>
 
         <div className="flex flex-col">
@@ -67,25 +75,25 @@ const Footer: React.FC = () => {
         </div>
         <div className="grid grid-cols-3 w-32 gap-4">
           <Link
-            href="/"
+            href="https://www.instagram.com/porosfilkom/"
             target="_blank"
-            className="bg-white w-[34px] overflow-hidden aspect-square flex items-center justify-center rounded-full"
+            className="bg-white hover:bg-gray-300 transition-colors duration-150 w-[34px] overflow-hidden aspect-square flex items-center justify-center rounded-full"
           >
             <InstagramIcon className="w-5 aspect-square text-darkBlue" />
           </Link>
           <Link
-            href="/"
+            href="https://www.youtube.com/channel/UC3Mh33VM0dwLlXiH_00qOJw"
             target="_blank"
-            className="bg-white w-[34px] overflow-hidden aspect-square flex items-center justify-center rounded-full"
+            className="bg-white hover:bg-gray-300 transition-colors duration-150 w-[34px] overflow-hidden aspect-square flex items-center justify-center rounded-full"
           >
             <YoutubeIcon className="w-5 aspect-square text-darkBlue" />
           </Link>
           <Link
-            href="/"
+            href="https://www.linkedin.com/company/porosfilkomub"
             target="_blank"
-            className="bg-white w-[34px] overflow-hidden aspect-square flex items-center justify-center rounded-full"
+            className="bg-white hover:bg-gray-300 transition-colors duration-150 w-[34px] overflow-hidden aspect-square flex items-center justify-center rounded-full"
           >
-            <TwitterIcon className="w-5 aspect-square text-darkBlue" />
+            <LinkedinIcon className="w-5 aspect-square text-darkBlue fill-darkBlue" />
           </Link>
         </div>
       </div>
