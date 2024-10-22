@@ -3,7 +3,7 @@ import type { FC } from "react";
 
 export const FilosofiLogo: FC = () => {
   return (
-    <section className="w-full relative h-fit flex pb-10 flex-col gap-28 items-center">
+    <section className="w-full relative h-fit flex pb-24 flex-col gap-28 items-center">
       <div className="absolute w-40 md:w-80 -left-20 md:-left-40 -top-20 -z-10 aspect-square">
         <Image
           src={"/svg/fragments/logo-bg-circle.svg"}

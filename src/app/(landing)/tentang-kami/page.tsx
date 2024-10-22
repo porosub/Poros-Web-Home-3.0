@@ -5,7 +5,7 @@ import type { FC } from "react";
 
 const TentangKami: FC = () => {
   return (
-    <main className="min-w-[350px] overflow-hidden flex flex-col gap-52">
+    <main className="min-w-[350px] overflow-hidden flex flex-col gap-24">
       <Hero />
       <VisiMisi />
       <FilosofiLogo />
