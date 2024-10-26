@@ -1,27 +1,18 @@
 "use client";
 
 import { useNavbarScroll } from "@/hooks/useNavbarScroll";
+import { useActivePage } from "@/hooks/useActivePage";
 import POROSLogo from "@/public/svg/logo/poros-flat.svg";
 import { type Variants, motion } from "framer-motion";
 import { HomeIcon, InfoIcon, LaptopIcon, MenuIcon, XIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const Navbar: React.FC = () => {
   const changeNav = useNavbarScroll();
   const [showSidebar, setShowSidebar] = useState(false);
-  const pathname = usePathname();
-  const initialActivePage =
-    pathname === "/"
-      ? 0
-      : pathname === "/blog"
-        ? 1
-        : pathname === "/tentang-kami"
-          ? 2
-          : 0;
-  const [activePage, setActivePage] = useState(initialActivePage);
+  const activePage = useActivePage();
 
   const sidebarVariants: Variants = {
     hidden: {
@@ -34,12 +25,6 @@ const Navbar: React.FC = () => {
     },
   };
 
-  useEffect(() => {
-    if (pathname === "/") setActivePage(0);
-    else if (pathname === "/blog") setActivePage(1);
-    else if (pathname === "/tentang-kami") setActivePage(2);
-  }, [pathname]);
-
   return (
     <>
       <nav
@@ -47,13 +32,7 @@ const Navbar: React.FC = () => {
           changeNav ? "bg-opacity-60" : "bg-opacity-0"
         } ${changeNav || activePage === 2 ? "text-black" : "text-white"}`}
       >
-        <Link
-          onClick={() => {
-            setActivePage(0);
-          }}
-          href={"/"}
-          className="relative w-12 h-12"
-        >
+        <Link href={"/"} className="relative w-12 h-12">
           <Image src={POROSLogo} alt="logo poros" fill={true} />
         </Link>
 
@@ -71,34 +50,13 @@ const Navbar: React.FC = () => {
 
         <ul className="hidden font-medium md:grid grid-cols-3 gap-y-2 grid-rows-[1fr,5px] justify-items-center">
           <li>
-            <Link
-              onClick={() => {
-                setActivePage(0);
-              }}
-              href={"/"}
-            >
-              Beranda
-            </Link>
+            <Link href={"/"}>Beranda</Link>
           </li>
           <li>
-            <Link
-              onClick={() => {
-                setActivePage(1);
-              }}
-              href={"/blog"}
-            >
-              Blogs
-            </Link>
+            <Link href={"/blog"}>Blogs</Link>
           </li>
           <li>
-            <Link
-              onClick={() => {
-                setActivePage(2);
-              }}
-              href={"/tentang-kami"}
-            >
-              Tentang Kami
-            </Link>
+            <Link href={"/tentang-kami"}>Tentang Kami</Link>
           </li>
           <div
             className="w-full h-full duration-200"
