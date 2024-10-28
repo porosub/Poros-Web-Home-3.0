@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type React from "react";
 
-import Navbar from "@/components/Navbar";
+import { QueryClientWrapper } from "@/components/wrapper/QueryClientWrapper";
 import { Rubik } from "next/font/google";
 import "./globals.css";
 
@@ -21,8 +21,7 @@ const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
       <body className={mainFont.className}>
-        <Navbar />
-        {children}
+        <QueryClientWrapper>{children}</QueryClientWrapper>
       </body>
     </html>
   );

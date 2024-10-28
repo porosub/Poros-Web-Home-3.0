@@ -1,0 +1,32 @@
+<svg width="145" height="145" viewBox="0 0 145 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_2020_399)">
+<circle cx="72.5" cy="68.5" r="68.5" fill="#FAFAFA"/>
+</g>
+<rect x="39" y="31" width="66.2772" height="37.703" stroke="#29AC4A" stroke-width="4"/>
+<rect x="37" y="73.0198" width="33.9802" height="33.9802" fill="#29AC4A"/>
+<rect x="73.2969" y="73.0198" width="33.9802" height="33.9802" fill="#29AC4A"/>
+<mask id="mask0_2020_399" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="42" y="79" width="23" height="23">
+<path d="M42.4053 79.198H64.8013V101.594H42.4053V79.198Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_2020_399)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M63.0597 93.425C65.3902 92.0784 65.3902 88.7134 63.0597 87.3655L51.1548 80.4829C48.8228 79.1349 45.9043 80.8188 45.9043 83.5134V97.2785C45.9043 99.973 48.8228 101.657 51.1548 100.308L63.0597 93.425Z" fill="#FFD633"/>
+</g>
+<path d="M84.1078 96.9606C85.3874 96.9606 86.4247 95.9233 86.4247 94.6437C86.4247 93.3642 85.3874 92.3269 84.1078 92.3269C82.8283 92.3269 81.791 93.3642 81.791 94.6437C81.791 95.9233 82.8283 96.9606 84.1078 96.9606Z" fill="#FFD633" stroke="#FFD633" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M93.3754 96.1884C94.655 96.1884 95.6923 95.1511 95.6923 93.8715C95.6923 92.592 94.655 91.5547 93.3754 91.5547C92.0959 91.5547 91.0586 92.592 91.0586 93.8715C91.0586 95.1511 92.0959 96.1884 93.3754 96.1884Z" fill="#FFD633" stroke="#FFD633" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M86.9248 87.8251V85.7668L95.1921 83.7V85.7583L86.9248 87.8251Z" fill="#FFD633" stroke="#FFD633"/>
+<path d="M86.4248 94.6437V88.4655ZM95.6921 93.8715V86.1487ZM86.4248 88.4655V85.3764L95.6921 83.0596V86.1487M86.4248 88.4655L95.6921 86.1487Z" fill="#FFD633"/>
+<path d="M86.4248 94.6437V88.4655M86.4248 88.4655V85.3764L95.6921 83.0596V86.1487M86.4248 88.4655L95.6921 86.1487M95.6921 93.8715V86.1487" stroke="#FFD633" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M85.6534 44.5904C86.8823 44.5904 88.0609 44.0945 88.9299 43.212C89.7989 42.3294 90.2871 41.1324 90.2871 39.8843C90.2871 38.6362 89.7989 37.4392 88.9299 36.5566C88.0609 35.674 86.8823 35.1782 85.6534 35.1782C84.4245 35.1782 83.2459 35.674 82.3769 36.5566C81.5079 37.4392 81.0198 38.6362 81.0198 39.8843C81.0198 41.1324 81.5079 42.3294 82.3769 43.212C83.2459 44.0945 84.4245 44.5904 85.6534 44.5904ZM56.4555 65.297H86.7481C88.7058 65.297 90.2871 63.6852 90.2871 61.7028C90.2871 61.0439 90.1075 60.3968 89.7716 59.8321L82.126 47.1081C81.8886 46.714 81.4715 46.4728 81.0198 46.4728C80.568 46.4728 80.1509 46.714 79.9135 47.1022L77.1217 51.7495L69.8295 39.9431C69.4472 39.3196 68.7695 38.9431 68.0455 38.9431C67.3215 38.9431 66.6496 39.3196 66.2615 39.9431L53.7159 60.2615C53.3915 60.7851 53.2178 61.391 53.2178 62.0087C53.2178 63.8264 54.6658 65.297 56.4555 65.297Z" fill="#FFD633"/>
+<defs>
+<filter id="filter0_d_2020_399" x="0" y="0" width="145" height="145" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2020_399"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2020_399" result="shape"/>
+</filter>
+</defs>
+</svg>

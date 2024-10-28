@@ -22,6 +22,7 @@ module.exports = {
         secondaryYellow: "var(--secondary-yellow)",
         accentRed: "var(--accent-red)",
         textDarkBlue: "var(--text-darkblue)",
+        darkBlue: "var(--text-darkblue)",
         backgroundWhite: "var(--background-white)",
 
         border: "hsl(var(--border))",
@@ -58,6 +59,7 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

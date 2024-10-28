@@ -76,7 +76,7 @@ Untuk melakukan perubahan pada codebase, buat branch baru dengan nama branch ses
 
 ```bash
 
-git branch "nama-branch"
+git branch "[feat/fix]/nama-branch"
 
 ```
 
@@ -84,7 +84,7 @@ Kemudian pindah ke branch yang telah dibuat
 
 ```bash
 
-git switch "nama-branch"
+git switch "[feat/fix]/nama-branch"
 
 ```
 
@@ -111,7 +111,8 @@ git push -u origin "nama branch"
 
 ```
 
-Kemudian lakukan pull request ke branch development pada repository Poros-Web-Home-3.0
+Usahakan commit message memenuhi [Conventional Commit](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13), 
+kemudian lakukan pull request ke branch development pada repository Poros-Web-Home-3.0
 
 ## Diskusi dan Request Perubahan Codebase
 
