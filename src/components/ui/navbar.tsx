@@ -1,6 +1,7 @@
 "use client";
 
 import { useNavbarScroll } from "@/hooks/useNavbarScroll";
+import { useActivePage } from "@/hooks/useActivePage";
 import POROSLogo from "@/public/svg/logo/poros-flat.svg";
 import { type Variants, motion } from "framer-motion";
 import { HomeIcon, InfoIcon, LaptopIcon, MenuIcon, XIcon } from "lucide-react";
@@ -11,6 +12,7 @@ import { useState } from "react";
 const Navbar: React.FC = () => {
   const changeNav = useNavbarScroll();
   const [showSidebar, setShowSidebar] = useState(false);
+  const activePage = useActivePage();
 
   const sidebarVariants: Variants = {
     hidden: {
@@ -27,8 +29,8 @@ const Navbar: React.FC = () => {
     <>
       <nav
         className={`fixed w-full flex py-3 z-30 px-5 md:px-10 bg-white justify-between items-center transition-all duration-150 ${
-          changeNav ? "bg-opacity-60 text-black" : "bg-opacity-0 text-white"
-        }`}
+          changeNav ? "bg-opacity-60" : "bg-opacity-0"
+        } ${changeNav || activePage === 2 ? "text-black" : "text-white"}`}
       >
         <Link href={"/"} className="relative w-12 h-12">
           <Image src={POROSLogo} alt="logo poros" fill={true} />
@@ -56,7 +58,10 @@ const Navbar: React.FC = () => {
           <li>
             <Link href={"/tentang-kami"}>Tentang Kami</Link>
           </li>
-          <div className="w-full h-full duration-200">
+          <div
+            className="w-full h-full duration-200"
+            style={{ transform: `translateX(${100 * activePage}%)` }}
+          >
             <span className="bg-primaryGreen block mx-auto h-full w-[80%] rounded-lg" />
           </div>
         </ul>
