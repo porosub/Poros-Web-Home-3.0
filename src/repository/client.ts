@@ -7,7 +7,7 @@ export class ApiClass {
   public axiosInstance: AxiosInstance;
 
   constructor(
-    baseURL: string = process.env.API_URL ?? "",
+    baseURL: string = process.env.NEXT_PUBLIC_API_URL ?? "",
     config?: Record<string, any>,
   ) {
     this.baseURL = baseURL;

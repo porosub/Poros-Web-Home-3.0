@@ -1,7 +1,6 @@
 "use client";
 
 import type { FC } from "react";
-import useLoginForm from "@/hooks/useLoginForm";
 import Image from "next/image";
 import { Mail, Lock } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -16,9 +15,11 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import useMutateLogin from "@/hooks/auth/useMutateLogin";
 
 const LoginPage: FC = () => {
-  const { form, onSubmit } = useLoginForm();
+  const { mutate, form } = useMutateLogin();
+  // const { form, onSubmit } = useLoginForm(mutate);
   const { errors, isSubmitted } = form.formState;
 
   return (
@@ -37,7 +38,7 @@ const LoginPage: FC = () => {
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
-                  void form.handleSubmit(onSubmit)(e);
+                  void form.handleSubmit(mutate)(e);
                 }}
                 className="space-y-4"
               >
@@ -48,16 +49,15 @@ const LoginPage: FC = () => {
                 )}
                 <FormField
                   control={form.control}
-                  name="email"
+                  name="username"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel>Username</FormLabel>
                       <FormControl>
                         <div className="relative">
                           <Input
-                            placeholder="Email address"
-                            type="email"
-                            className={`py-6 focus:border-green-400 focus:border-2 focus:outline-none focus:ring-0 focus:ring-offset-0 transition-colors duration-200${Boolean(errors.email) && Boolean(isSubmitted) && " border-red-500"}`}
+                            placeholder="Username"
+                            className={`py-6 focus:border-green-400 focus:border-2 focus:outline-none focus:ring-0 focus:ring-offset-0 transition-colors duration-200${Boolean(errors.username) && Boolean(isSubmitted) && " border-red-500"}`}
                             {...field}
                           />
                           <Mail className="absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
