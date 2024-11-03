@@ -14,3 +14,16 @@ export function convertObjectToQueryParams(obj: Record<string, any>): string {
     .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(obj[key])}`)
     .join("&");
 }
+
+export function scrollToTop(): void {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+export const generateSlug = (title: string): string => {
+  return title
+    .toLowerCase() // Convert to lowercase
+    .replace(/[^\w\s-]/g, "") // Remove special characters
+    .replace(/\s+/g, "-") // Replace spaces with hyphens
+    .replace(/-+/g, "-") // Replace multiple hyphens with single hyphen
+    .trim(); // Remove leading/trailing spaces
+};

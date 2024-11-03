@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
       <nav
         className={`fixed w-full flex py-3 z-30 px-5 md:px-10 bg-white justify-between items-center transition-all duration-150 ${
           changeNav ? "bg-opacity-60" : "bg-opacity-0"
-        } ${changeNav || activePage === 2 ? "text-black" : "text-white"}`}
+        } ${changeNav || activePage === 1 || activePage === 2 ? "text-black" : "text-white"}`}
       >
         <Link href={"/"} className="relative w-12 h-12">
           <Image src={POROSLogo} alt="logo poros" fill={true} />
