@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
             <Link href={"/"}>Beranda</Link>
           </li>
           <li>
-            <Link href={"/blog"}>Blogs</Link>
+            <Link href={"/blogs"}>Blogs</Link>
           </li>
           <li>
             <Link href={"/tentang-kami"}>Tentang Kami</Link>
@@ -87,20 +87,29 @@ const Navbar: React.FC = () => {
           <Link
             href={"/"}
             className="flex items-center justify-end border-b gap-5 py-4"
+            onClick={() => {
+              setShowSidebar((prev) => !prev);
+            }}
           >
             <span>Beranda</span>
             <HomeIcon />
           </Link>
           <Link
-            href={"/"}
+            href={"/blogs"}
             className="flex items-center justify-end border-b gap-5 py-4"
+            onClick={() => {
+              setShowSidebar((prev) => !prev);
+            }}
           >
             <span>Blogs</span>
             <LaptopIcon />
           </Link>
           <Link
-            href={"/"}
+            href={"/tentang-kami"}
             className="flex items-center justify-end border-b gap-5 py-4"
+            onClick={() => {
+              setShowSidebar((prev) => !prev);
+            }}
           >
             <span>Tentang Kami</span>
             <InfoIcon />
