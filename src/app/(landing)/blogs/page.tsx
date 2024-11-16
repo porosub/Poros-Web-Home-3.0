@@ -1,9 +1,9 @@
 "use client";
 import { FC } from "react";
 import dataDummyBlog from "@/lib/static/data-dummy-blog";
-import SearchBar from "@/components/blog/SearchBar";
-import PaginationControls from "@/components/blog/PaginationControls";
-import BlogCard from "@/components/blog/BlogCard";
+import SearchBar from "@/components/blog/search-bar";
+import PaginationControls from "@/components/blog/pagination-control";
+import BlogCard from "@/components/blog/blog-card";
 import { useBlogPagination } from "@/hooks/useBlogPagination";
 
 // Constants

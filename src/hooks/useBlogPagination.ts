@@ -1,7 +1,7 @@
 // hooks/useBlogPagination.ts
 import { useState, useEffect, useMemo } from "react";
 import { scrollToTop } from "@/lib/utils"; // You'll need to define this type
-import { BlogPost } from "@/components/blog/BlogCard";
+import { BlogPost } from "@/components/blog/blog-card";
 
 interface UseBlogPaginationProps {
   posts: BlogPost[];
