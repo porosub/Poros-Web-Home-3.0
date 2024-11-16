@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
       <nav
         className={`fixed w-full flex py-3 z-30 px-5 md:px-10 bg-white justify-between items-center transition-all duration-150 ${
           changeNav ? "bg-opacity-60" : "bg-opacity-0"
-        } ${changeNav || activePage === 2 ? "text-black" : "text-white"}`}
+        } ${changeNav || activePage === 1 || activePage === 2 ? "text-black" : "text-white"}`}
       >
         <Link href={"/"} className="relative w-12 h-12">
           <Image src={POROSLogo} alt="logo poros" fill={true} />
@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
             <Link href={"/"}>Beranda</Link>
           </li>
           <li>
-            <Link href={"/blog"}>Blogs</Link>
+            <Link href={"/blogs"}>Blogs</Link>
           </li>
           <li>
             <Link href={"/tentang-kami"}>Tentang Kami</Link>
@@ -87,20 +87,29 @@ const Navbar: React.FC = () => {
           <Link
             href={"/"}
             className="flex items-center justify-end border-b gap-5 py-4"
+            onClick={() => {
+              setShowSidebar((prev) => !prev);
+            }}
           >
             <span>Beranda</span>
             <HomeIcon />
           </Link>
           <Link
-            href={"/"}
+            href={"/blogs"}
             className="flex items-center justify-end border-b gap-5 py-4"
+            onClick={() => {
+              setShowSidebar((prev) => !prev);
+            }}
           >
             <span>Blogs</span>
             <LaptopIcon />
           </Link>
           <Link
-            href={"/"}
+            href={"/tentang-kami"}
             className="flex items-center justify-end border-b gap-5 py-4"
+            onClick={() => {
+              setShowSidebar((prev) => !prev);
+            }}
           >
             <span>Tentang Kami</span>
             <InfoIcon />
