@@ -17,7 +17,6 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({ post }: BlogCardProps) => {
-  // Generate slug if not provided
   const slug = generateSlug(post.title);
 
   return (

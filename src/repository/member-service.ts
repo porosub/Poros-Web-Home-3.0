@@ -1,13 +1,14 @@
 import type { IResponse } from "@/lib/types/general-types";
 import { ApiClass } from "./client";
 import type { IMember } from "@/lib/types/member-types";
+import { cookies } from "next/headers";
+import { getCookie } from "@/lib/cookie";
 
 class MemberService extends ApiClass {
   public async getAllMembers(
-    query?: Record<string, string>,
+    query: Record<string, any> = {},
   ): Promise<IResponse<IMember[]>> {
-    const token = JSON.parse(localStorage.getItem("token") ?? "");
-
+    const token = await getCookie("token");
     const res = await this.axiosInstance.get(
       `/members?${new URLSearchParams(query).toString()}`,
       {
@@ -17,7 +18,7 @@ class MemberService extends ApiClass {
       },
     );
 
-    return res;
+    return res.data;
   }
 }
 

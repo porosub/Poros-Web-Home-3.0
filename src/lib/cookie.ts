@@ -5,6 +5,10 @@ export const setCookie = async (key: string, value: string): Promise<void> => {
   cookies().set(key, value);
 };
 
+export const getCookie = async (key: string): Promise<void> => {
+  cookies().get(key);
+};
+
 export const deleteCookie = async (key: string): Promise<void> => {
   cookies().delete(key);
 };

@@ -1,8 +1,8 @@
 export interface IMember {
-  id: number;
-  name: string;
-  position: string;
-  division: string;
-  group: string;
-  imageFileName: string;
+    id: number;
+    name: string;
+    position: string;
+    division: string;
+    group: string;
+    imageFileName: string;
 }

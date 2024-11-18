@@ -28,7 +28,7 @@ function useUrlQuery(): IUrlQueryHook {
     page: page !== undefined ? Number.parseInt(page) : undefined,
   });
 
-  const debouncedQuery = useDebounce(urlQuery, 700);
+  const debouncedQuery = useDebounce(urlQuery, 1000);
 
   useEffect(() => {
     const existingParams = Object.fromEntries(searchParams.entries());
@@ -42,7 +42,7 @@ function useUrlQuery(): IUrlQueryHook {
 
     router.push(newUrl);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [debouncedQuery]);
+  }, [debouncedQuery[0]]); // Depend only on the debounced value
 
   return { urlQuery, setUrlQuery, debouncedQuery };
 }

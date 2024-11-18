@@ -21,9 +21,9 @@ export function scrollToTop(): void {
 
 export const generateSlug = (title: string): string => {
   return title
-    .toLowerCase() // Convert to lowercase
-    .replace(/[^\w\s-]/g, "") // Remove special characters
-    .replace(/\s+/g, "-") // Replace spaces with hyphens
-    .replace(/-+/g, "-") // Replace multiple hyphens with single hyphen
-    .trim(); // Remove leading/trailing spaces
+    .toLowerCase() 
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-") 
+    .replace(/-+/g, "-")
+    .trim(); 
 };
